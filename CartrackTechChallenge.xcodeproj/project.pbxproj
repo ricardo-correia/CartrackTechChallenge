@@ -3,17 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E113241CF7068B2E60A94B9 /* Pods_CartrackTechChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0FF2744F7508D4E2BF50DCA /* Pods_CartrackTechChallenge.framework */; };
+		6D65E2EB9BECF442C6E0E8FF /* Pods_CartrackTechChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFE3D2DEFF61191458F61080 /* Pods_CartrackTechChallengeTests.framework */; };
 		FA495D97249046AA005B9963 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495D96249046AA005B9963 /* AppDelegate.swift */; };
-		FA495D99249046AA005B9963 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495D98249046AA005B9963 /* SceneDelegate.swift */; };
-		FA495D9B249046AA005B9963 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495D9A249046AA005B9963 /* ViewController.swift */; };
+		FA495D9B249046AA005B9963 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495D9A249046AA005B9963 /* LoginViewController.swift */; };
 		FA495D9E249046AA005B9963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA495D9C249046AA005B9963 /* Main.storyboard */; };
 		FA495DA0249046AB005B9963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA495D9F249046AB005B9963 /* Assets.xcassets */; };
 		FA495DA3249046AB005B9963 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA495DA1249046AB005B9963 /* LaunchScreen.storyboard */; };
 		FA495DAE249046AB005B9963 /* CartrackTechChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DAD249046AB005B9963 /* CartrackTechChallengeTests.swift */; };
+		FA495DC324904850005B9963 /* ILoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DC224904850005B9963 /* ILoginViewModel.swift */; };
+		FA495DC52490485E005B9963 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DC42490485E005B9963 /* LoginViewModel.swift */; };
+		FA495DC724904871005B9963 /* IRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DC624904871005B9963 /* IRegisterViewModel.swift */; };
+		FA495DC924904881005B9963 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DC824904881005B9963 /* RegisterViewController.swift */; };
+		FA495DCB24904893005B9963 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DCA24904893005B9963 /* RegisterViewModel.swift */; };
+		FA495DCD249048BA005B9963 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DCC249048BA005B9963 /* SceneDelegate.swift */; };
+		FA495DCF249048E2005B9963 /* IUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DCE249048E2005B9963 /* IUserService.swift */; };
+		FA495DD1249048F0005B9963 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DD0249048F0005B9963 /* UserService.swift */; };
+		FA495DD3249049D3005B9963 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DD2249049D3005B9963 /* UserListViewController.swift */; };
+		FA495DD5249049FA005B9963 /* IUserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DD4249049FA005B9963 /* IUserListViewModel.swift */; };
+		FA495DD724904A05005B9963 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DD624904A05005B9963 /* UserListViewModel.swift */; };
+		FA495DD924904A6E005B9963 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DD824904A6E005B9963 /* UserDetailsViewController.swift */; };
+		FA495DDB24904A84005B9963 /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DDA24904A84005B9963 /* UserDetailsViewModel.swift */; };
+		FA495DDD24904A9B005B9963 /* IUserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DDC24904A9B005B9963 /* IUserDetailsViewModel.swift */; };
+		FA495DE524904BF7005B9963 /* DependencyResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DE024904BF7005B9963 /* DependencyResolver.swift */; };
+		FA495DE624904BF7005B9963 /* InjectAppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DE124904BF7005B9963 /* InjectAppServices.swift */; };
+		FA495DE724904BF7005B9963 /* SwinjectStoryboard+Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DE224904BF7005B9963 /* SwinjectStoryboard+Inject.swift */; };
+		FA495DE824904BF7005B9963 /* InjectAppViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DE324904BF7005B9963 /* InjectAppViewModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03B36A9B7ED3E1783AA36972 /* Pods-CartrackTechChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartrackTechChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-CartrackTechChallengeTests/Pods-CartrackTechChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		436E651D074FE25742188F6E /* Pods-CartrackTechChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartrackTechChallenge.debug.xcconfig"; path = "Target Support Files/Pods-CartrackTechChallenge/Pods-CartrackTechChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		4D8F8AADEBD41D326B6F68C2 /* Pods-CartrackTechChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartrackTechChallenge.release.xcconfig"; path = "Target Support Files/Pods-CartrackTechChallenge/Pods-CartrackTechChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		A0FF2744F7508D4E2BF50DCA /* Pods_CartrackTechChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CartrackTechChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBBCBA23C99AAB43C9706F58 /* Pods-CartrackTechChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartrackTechChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-CartrackTechChallengeTests/Pods-CartrackTechChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DFE3D2DEFF61191458F61080 /* Pods_CartrackTechChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CartrackTechChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA495D93249046AA005B9963 /* CartrackTechChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartrackTechChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA495D96249046AA005B9963 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA495D98249046AA005B9963 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA495D9A249046AA005B9963 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA495D9A249046AA005B9963 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FA495D9D249046AA005B9963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA495D9F249046AB005B9963 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA495DA2249046AB005B9963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +62,24 @@
 		FA495DA9249046AB005B9963 /* CartrackTechChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CartrackTechChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA495DAD249046AB005B9963 /* CartrackTechChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartrackTechChallengeTests.swift; sourceTree = "<group>"; };
 		FA495DAF249046AB005B9963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA495DC224904850005B9963 /* ILoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoginViewModel.swift; sourceTree = "<group>"; };
+		FA495DC42490485E005B9963 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FA495DC624904871005B9963 /* IRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRegisterViewModel.swift; sourceTree = "<group>"; };
+		FA495DC824904881005B9963 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FA495DCA24904893005B9963 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		FA495DCC249048BA005B9963 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA495DCE249048E2005B9963 /* IUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserService.swift; sourceTree = "<group>"; };
+		FA495DD0249048F0005B9963 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		FA495DD2249049D3005B9963 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		FA495DD4249049FA005B9963 /* IUserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserListViewModel.swift; sourceTree = "<group>"; };
+		FA495DD624904A05005B9963 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		FA495DD824904A6E005B9963 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		FA495DDA24904A84005B9963 /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
+		FA495DDC24904A9B005B9963 /* IUserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserDetailsViewModel.swift; sourceTree = "<group>"; };
+		FA495DE024904BF7005B9963 /* DependencyResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyResolver.swift; sourceTree = "<group>"; };
+		FA495DE124904BF7005B9963 /* InjectAppServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectAppServices.swift; sourceTree = "<group>"; };
+		FA495DE224904BF7005B9963 /* SwinjectStoryboard+Inject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Inject.swift"; sourceTree = "<group>"; };
+		FA495DE324904BF7005B9963 /* InjectAppViewModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectAppViewModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E113241CF7068B2E60A94B9 /* Pods_CartrackTechChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +95,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D65E2EB9BECF442C6E0E8FF /* Pods_CartrackTechChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		852107D5D2F0CFA64275E3D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				436E651D074FE25742188F6E /* Pods-CartrackTechChallenge.debug.xcconfig */,
+				4D8F8AADEBD41D326B6F68C2 /* Pods-CartrackTechChallenge.release.xcconfig */,
+				BBBCBA23C99AAB43C9706F58 /* Pods-CartrackTechChallengeTests.debug.xcconfig */,
+				03B36A9B7ED3E1783AA36972 /* Pods-CartrackTechChallengeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8DE7C3EB4914F35FB451C6C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0FF2744F7508D4E2BF50DCA /* Pods_CartrackTechChallenge.framework */,
+				DFE3D2DEFF61191458F61080 /* Pods_CartrackTechChallengeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA495D8A249046A9005B9963 = {
 			isa = PBXGroup;
 			children = (
 				FA495D95249046AA005B9963 /* CartrackTechChallenge */,
 				FA495DAC249046AB005B9963 /* CartrackTechChallengeTests */,
 				FA495D94249046AA005B9963 /* Products */,
+				852107D5D2F0CFA64275E3D7 /* Pods */,
+				8DE7C3EB4914F35FB451C6C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,11 +146,15 @@
 			isa = PBXGroup;
 			children = (
 				FA495D96249046AA005B9963 /* AppDelegate.swift */,
-				FA495D98249046AA005B9963 /* SceneDelegate.swift */,
-				FA495D9A249046AA005B9963 /* ViewController.swift */,
-				FA495D9C249046AA005B9963 /* Main.storyboard */,
+				FA495DCC249048BA005B9963 /* SceneDelegate.swift */,
+				FA495DB824904792005B9963 /* Register */,
+				FA495DBC249047AB005B9963 /* Login */,
+				FA495DB9249047AA005B9963 /* Users */,
+				FA495DBD249047AC005B9963 /* Model */,
+				FA495DBE249047AC005B9963 /* Services */,
+				FA495DDE24904BF7005B9963 /* Swinject */,
+				FA495DC1249047BE005B9963 /* Resources */,
 				FA495D9F249046AB005B9963 /* Assets.xcassets */,
-				FA495DA1249046AB005B9963 /* LaunchScreen.storyboard */,
 				FA495DA4249046AB005B9963 /* Info.plist */,
 			);
 			path = CartrackTechChallenge;
@@ -99,6 +169,75 @@
 			path = CartrackTechChallengeTests;
 			sourceTree = "<group>";
 		};
+		FA495DB824904792005B9963 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				FA495DC824904881005B9963 /* RegisterViewController.swift */,
+				FA495DC624904871005B9963 /* IRegisterViewModel.swift */,
+				FA495DCA24904893005B9963 /* RegisterViewModel.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		FA495DB9249047AA005B9963 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				FA495DD2249049D3005B9963 /* UserListViewController.swift */,
+				FA495DD4249049FA005B9963 /* IUserListViewModel.swift */,
+				FA495DD624904A05005B9963 /* UserListViewModel.swift */,
+				FA495DD824904A6E005B9963 /* UserDetailsViewController.swift */,
+				FA495DDC24904A9B005B9963 /* IUserDetailsViewModel.swift */,
+				FA495DDA24904A84005B9963 /* UserDetailsViewModel.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		FA495DBC249047AB005B9963 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FA495D9A249046AA005B9963 /* LoginViewController.swift */,
+				FA495DC224904850005B9963 /* ILoginViewModel.swift */,
+				FA495DC42490485E005B9963 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FA495DBD249047AC005B9963 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA495DBE249047AC005B9963 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA495DCE249048E2005B9963 /* IUserService.swift */,
+				FA495DD0249048F0005B9963 /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA495DC1249047BE005B9963 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA495D9C249046AA005B9963 /* Main.storyboard */,
+				FA495DA1249046AB005B9963 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA495DDE24904BF7005B9963 /* Swinject */ = {
+			isa = PBXGroup;
+			children = (
+				FA495DE024904BF7005B9963 /* DependencyResolver.swift */,
+				FA495DE124904BF7005B9963 /* InjectAppServices.swift */,
+				FA495DE324904BF7005B9963 /* InjectAppViewModels.swift */,
+				FA495DE224904BF7005B9963 /* SwinjectStoryboard+Inject.swift */,
+			);
+			path = Swinject;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +245,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA495DB2249046AB005B9963 /* Build configuration list for PBXNativeTarget "CartrackTechChallenge" */;
 			buildPhases = (
+				A7C54CAB6085B2D7AB359C52 /* [CP] Check Pods Manifest.lock */,
 				FA495D8F249046AA005B9963 /* Sources */,
 				FA495D90249046AA005B9963 /* Frameworks */,
 				FA495D91249046AA005B9963 /* Resources */,
+				7C0A896B7854F89E852B06DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,9 +264,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA495DB5249046AB005B9963 /* Build configuration list for PBXNativeTarget "CartrackTechChallengeTests" */;
 			buildPhases = (
+				2F3E9B781886C639CD338337 /* [CP] Check Pods Manifest.lock */,
 				FA495DA5249046AB005B9963 /* Sources */,
 				FA495DA6249046AB005B9963 /* Frameworks */,
 				FA495DA7249046AB005B9963 /* Resources */,
+				0837C2819897B7D8E7B20B08 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,14 +338,112 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0837C2819897B7D8E7B20B08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CartrackTechChallengeTests/Pods-CartrackTechChallengeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CartrackTechChallengeTests/Pods-CartrackTechChallengeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CartrackTechChallengeTests/Pods-CartrackTechChallengeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F3E9B781886C639CD338337 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CartrackTechChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C0A896B7854F89E852B06DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CartrackTechChallenge/Pods-CartrackTechChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CartrackTechChallenge/Pods-CartrackTechChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CartrackTechChallenge/Pods-CartrackTechChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7C54CAB6085B2D7AB359C52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CartrackTechChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA495D8F249046AA005B9963 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA495D9B249046AA005B9963 /* ViewController.swift in Sources */,
+				FA495DDD24904A9B005B9963 /* IUserDetailsViewModel.swift in Sources */,
+				FA495DC924904881005B9963 /* RegisterViewController.swift in Sources */,
+				FA495DD3249049D3005B9963 /* UserListViewController.swift in Sources */,
+				FA495DCB24904893005B9963 /* RegisterViewModel.swift in Sources */,
+				FA495DE524904BF7005B9963 /* DependencyResolver.swift in Sources */,
+				FA495DC324904850005B9963 /* ILoginViewModel.swift in Sources */,
+				FA495DD924904A6E005B9963 /* UserDetailsViewController.swift in Sources */,
+				FA495D9B249046AA005B9963 /* LoginViewController.swift in Sources */,
+				FA495DCD249048BA005B9963 /* SceneDelegate.swift in Sources */,
+				FA495DE724904BF7005B9963 /* SwinjectStoryboard+Inject.swift in Sources */,
+				FA495DE624904BF7005B9963 /* InjectAppServices.swift in Sources */,
 				FA495D97249046AA005B9963 /* AppDelegate.swift in Sources */,
-				FA495D99249046AA005B9963 /* SceneDelegate.swift in Sources */,
+				FA495DD5249049FA005B9963 /* IUserListViewModel.swift in Sources */,
+				FA495DE824904BF7005B9963 /* InjectAppViewModels.swift in Sources */,
+				FA495DC724904871005B9963 /* IRegisterViewModel.swift in Sources */,
+				FA495DD724904A05005B9963 /* UserListViewModel.swift in Sources */,
+				FA495DDB24904A84005B9963 /* UserDetailsViewModel.swift in Sources */,
+				FA495DD1249048F0005B9963 /* UserService.swift in Sources */,
+				FA495DCF249048E2005B9963 /* IUserService.swift in Sources */,
+				FA495DC52490485E005B9963 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +601,7 @@
 		};
 		FA495DB3249046AB005B9963 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 436E651D074FE25742188F6E /* Pods-CartrackTechChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +620,7 @@
 		};
 		FA495DB4249046AB005B9963 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D8F8AADEBD41D326B6F68C2 /* Pods-CartrackTechChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +639,7 @@
 		};
 		FA495DB6249046AB005B9963 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBBCBA23C99AAB43C9706F58 /* Pods-CartrackTechChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +662,7 @@
 		};
 		FA495DB7249046AB005B9963 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03B36A9B7ED3E1783AA36972 /* Pods-CartrackTechChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
