@@ -7,7 +7,14 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 internal protocol IUserListViewModel {
+    
+    // MARK: - Observable Variables
+    var userList: BehaviorRelay<[User]> { get }
+    
+    // MARK: - Functions
     func loadData()
 }

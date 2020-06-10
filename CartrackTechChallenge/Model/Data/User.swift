@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-internal struct User {
+internal class User {
     internal var id: Int?
     internal var name: String?
     internal var username: String?
@@ -25,42 +25,15 @@ internal struct User {
     }
     
     private func parseJsonData(data: JSON) {
+        self.id = data["id"].int
+        self.name = data["name"].string
+        self.username = data["username"].string
+        self.email = data["email"].string
+        self.phone = data["phone"].string
+        self.website = data["website"].string
         
-    }
-}
-
-internal struct Address {
-    internal var street: String?
-    internal var suite: String?
-    internal var city: String?
-    internal var zipcode: String?
-    
-    init(street: String?, suite: String?, city: String?, zipcode: String?) {
-        self.street = street
-        self.suite = suite
-        self.city = city
-        self.zipcode = zipcode
-    }
-}
-
-internal struct Geo {
-    internal var latitude: Double?
-    internal var longitude: Double?
-    
-    init(latitude: Double?, longitude: Double?) {
-        self.latitude = latitude
-        self.longitude = longitude
-    }
-}
-
-internal struct Company {
-    internal var name: String?
-    internal var catchPhrase: String?
-    internal var bs: String?
-    
-    init(name: String?, catchPhrase: String?, bs: String?) {
-        self.name = name
-        self.catchPhrase = catchPhrase
-        self.bs = bs
+        self.address = Address(data: data)
+        self.geo = Geo(data: data)
+        self.company = Company(data: data)
     }
 }

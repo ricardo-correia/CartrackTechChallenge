@@ -12,6 +12,9 @@ import RxCocoa
 
 internal class UserListViewModel: IUserListViewModel {
     
+    // MARK: - Observable Variables
+    internal var userList: BehaviorRelay<[User]> = BehaviorRelay<[User]>(value: [])
+    
     // MARK: - Internal Attributes
     internal var userService: IUserService?
        
@@ -26,11 +29,11 @@ internal class UserListViewModel: IUserListViewModel {
     internal func loadData() {
         let getUserList = self.userService?.getUserList()
         getUserList?.subscribe(
-            onNext: { jsonData in
-                
+            onNext: { data in
+                self.userList.accept(data)
             },
             onError: { error in
-               
+                //TODO: Error Handling
             }
         ).disposed(by: self.disposeBag)
     }
