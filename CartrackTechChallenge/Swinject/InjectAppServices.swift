@@ -13,7 +13,8 @@ public class InjectAppServices: Assembly {
 
         // IUserService
         container.register(IUserService.self) { _ in
-            return UserService()
+            let repository = container.resolve(IUserRepository.self)
+            return UserService(with: repository)
         }
     }
 }

@@ -10,7 +10,7 @@ import Swinject
 import SwinjectStoryboard
 
 public class DependencyResolver {
-    private var registers: [Assembly] = [InjectAppServices(), InjectAppViewModels()]
+    private var registers: [Assembly] = [InjectAppViewModels(), InjectAppServices(), InjectAppRepositories()]
     private let resolver: Resolver
 
     public init() {

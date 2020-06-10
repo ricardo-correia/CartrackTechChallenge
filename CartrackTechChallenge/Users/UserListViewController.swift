@@ -11,8 +11,15 @@ import Foundation
 import UIKit
 
 internal class UserListViewController: UITableViewController {
+    
+    // MARK: - Internal Attributes
+    internal var userListViewModel: IUserListViewModel?
+    
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        self.userListViewModel?.loadData()
     }
 }

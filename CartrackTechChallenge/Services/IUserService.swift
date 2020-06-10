@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 internal protocol IUserService {
     
+    func getUserList() -> Observable<[User]>
 }

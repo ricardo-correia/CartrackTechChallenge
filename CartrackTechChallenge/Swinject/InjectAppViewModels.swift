@@ -11,10 +11,25 @@ import Swinject
 public class InjectAppViewModels: Assembly {
     public func assemble(container: Container) {
 
-        // LoginViewModel
+        // ILoginViewModel
         container.register(ILoginViewModel.self) { _ in
-            //let userService = container.resolve(IUserService.self)!
             return LoginViewModel()
+        }
+        
+        // IRegisterViewModel
+        container.register(IRegisterViewModel.self) { _ in
+            return RegisterViewModel()
+        }
+        
+        // IUserListViewModel
+        container.register(IUserListViewModel.self) { _ in
+            let userService = container.resolve(IUserService.self)
+            return UserListViewModel(with: userService)
+        }
+        
+        // IUserDetailsViewModel
+        container.register(IUserDetailsViewModel.self) { _ in
+            return UserDetailsViewModel()
         }
     }
 }

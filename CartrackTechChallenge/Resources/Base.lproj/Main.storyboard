@@ -213,6 +213,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="IsE-na-zge" kind="show" id="Ott-VD-plv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -242,6 +245,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="eZs-Nv-pCN"/>
                     </view>
+                    <navigationItem key="navigationItem" id="mNb-Vf-mpb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMm-SB-RAg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

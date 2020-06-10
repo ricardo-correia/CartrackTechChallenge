@@ -6,6 +6,7 @@ def cartrack_pods
     pod "RxSwift", "5.0.0"
     pod "RxCocoa", "5.0.0"
     pod "Alamofire", "4.8.2"
+    pod "SwiftyJSON", "5.0.0"
     # Swift Inject
     pod "Swinject", "2.6.2"
     pod "SwinjectStoryboard", "2.2.0"

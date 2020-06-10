@@ -10,8 +10,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    // MARK: - Internal Attributes
     internal var loginViewModel: ILoginViewModel?
     
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
