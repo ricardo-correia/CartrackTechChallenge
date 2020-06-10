@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 
-internal class UserListViewController: UIViewController {
+internal class UserListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
