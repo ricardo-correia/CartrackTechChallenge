@@ -1,5 +1,5 @@
 //
-//  UserListCell.swift
+//  AddressCell.swift
 //  CartrackTechChallenge
 //
 //  Created by Ricardo Correia on 10/06/2020.
@@ -8,14 +8,14 @@
 
 import Foundation
 import UIKit
+import MapKit
 
-internal class UserListCell: UITableViewCell {
-   
-    //MARK: - IBOutlets
-    @IBOutlet weak var avatar: UIImageView!
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var username: UILabel!
-    @IBOutlet weak var email: UILabel!
+internal class AddressCell: UITableViewCell {
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var addressName: UILabel!
+    @IBOutlet weak var mapView: MKMapView!
     
     // MARK: View Lifecycle
     override func awakeFromNib() {

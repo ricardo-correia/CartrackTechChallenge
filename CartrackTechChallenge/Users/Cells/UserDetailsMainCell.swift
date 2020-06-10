@@ -1,5 +1,5 @@
 //
-//  UserListCell.swift
+//  UserDetailsMainCell.swift
 //  CartrackTechChallenge
 //
 //  Created by Ricardo Correia on 10/06/2020.
@@ -9,12 +9,15 @@
 import Foundation
 import UIKit
 
-internal class UserListCell: UITableViewCell {
-   
-    //MARK: - IBOutlets
+internal class UserDetailsMainCell: UITableViewCell{
+    
+     //MARK: - IBOutlets
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var username: UILabel!
+    
+    @IBOutlet weak var phoneNumber: UILabel!
+    @IBOutlet weak var website: UILabel!
     @IBOutlet weak var email: UILabel!
     
     // MARK: View Lifecycle

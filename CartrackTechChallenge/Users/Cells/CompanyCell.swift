@@ -1,5 +1,5 @@
 //
-//  UserListCell.swift
+//  CompanyCell.swift
 //  CartrackTechChallenge
 //
 //  Created by Ricardo Correia on 10/06/2020.
@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-internal class UserListCell: UITableViewCell {
-   
-    //MARK: - IBOutlets
-    @IBOutlet weak var avatar: UIImageView!
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var username: UILabel!
-    @IBOutlet weak var email: UILabel!
+internal class CompanyCell: UITableViewCell {
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var worksAtLabel: UILabel!
+    @IBOutlet weak var companyName: UILabel!
+    @IBOutlet weak var catchPhrase: UILabel!
+    @IBOutlet weak var bs: UILabel!
     
     // MARK: View Lifecycle
     override func awakeFromNib() {

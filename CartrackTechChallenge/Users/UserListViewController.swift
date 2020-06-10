@@ -28,6 +28,15 @@ internal class UserListViewController: UITableViewController {
         self.userListViewModel?.loadData()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let row = self.tableView?.indexPathForSelectedRow?.row ?? 0
+        guard let viewController = segue.destination as? UserDetailsViewController else {
+            return
+        }
+        
+        viewController.userDetails = self.userList[row]
+    }
+    
     private func bindObservableVariables() {
         self.userListViewModel?.userList.asObservable()
             .bind { list in

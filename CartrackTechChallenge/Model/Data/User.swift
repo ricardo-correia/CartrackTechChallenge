@@ -32,8 +32,8 @@ internal class User {
         self.phone = data["phone"].string
         self.website = data["website"].string
         
-        self.address = Address(data: data)
-        self.geo = Geo(data: data)
-        self.company = Company(data: data)
+        self.address = Address(data: data["address"])
+        self.geo = Geo(data: data["address"]["geo"])
+        self.company = Company(data: data["company"])
     }
 }
