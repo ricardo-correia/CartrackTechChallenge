@@ -17,7 +17,6 @@ internal class User {
     internal var phone: String?
     internal var website: String?
     internal var address: Address?
-    internal var geo: Geo?
     internal var company: Company?
     
     init(data: JSON) {
@@ -33,7 +32,6 @@ internal class User {
         self.website = data["website"].string
         
         self.address = Address(data: data["address"])
-        self.geo = Geo(data: data["address"]["geo"])
         self.company = Company(data: data["company"])
     }
 }

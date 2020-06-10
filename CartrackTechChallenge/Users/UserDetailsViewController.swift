@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 import UIKit
 
 internal class UserDetailsViewController: UITableViewController {
@@ -99,6 +100,13 @@ extension UserDetailsViewController {
         /// Configure the cell and supply the data do be displayed
         let address = "\(userDetails?.address?.street ?? ""), \(userDetails?.address?.suite ?? ""), \(userDetails?.address?.zipcode ?? "") - \(userDetails?.address?.city ?? "")"
         cell.addressName?.text = address
+        
+        let lat = userDetails?.address?.geo?.latitude ?? 0
+        let long = userDetails?.address?.geo?.longitude ?? 0
+        
+        let userCenter = CLLocationCoordinate2D(latitude: lat, longitude: long)
+        print("lat = \(lat), long = \(long)")
+        cell.mapView.setCenter(userCenter, animated: true)
         
         return cell
     }

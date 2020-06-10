@@ -14,6 +14,7 @@ internal class Address {
     internal var suite: String?
     internal var city: String?
     internal var zipcode: String?
+    internal var geo: Geo?
     
     init(data: JSON) {
         self.parseJsonData(data: data)
@@ -24,5 +25,7 @@ internal class Address {
         self.suite = data["suite"].string
         self.city = data["city"].string
         self.zipcode = data["zipcode"].string
+        
+        self.geo = Geo(data: data["geo"])
     }
 }

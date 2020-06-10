@@ -18,8 +18,8 @@ internal class Geo {
     }
     
     private func parseJsonData(data: JSON) {
-        self.latitude = data["lat"].double
-        self.longitude = data["long"].double
+        self.latitude = Double(data["lat"].string ?? "")
+        self.longitude = Double(data["lng"].string ?? "")
     }
 }
 
