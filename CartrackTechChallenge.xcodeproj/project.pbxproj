@@ -54,6 +54,7 @@
 		FAAABFCE2491AED000B82268 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAABFCD2491AED000B82268 /* AccountService.swift */; };
 		FAAABFD02491AF2C00B82268 /* IAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAABFCF2491AF2C00B82268 /* IAccountRepository.swift */; };
 		FAAABFD22491AF3C00B82268 /* AccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAABFD12491AF3C00B82268 /* AccountRepository.swift */; };
+		FAEF36F02492A1F200E97DDD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF36EF2492A1F200E97DDD /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		FAAABFCD2491AED000B82268 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		FAAABFCF2491AF2C00B82268 /* IAccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAccountRepository.swift; sourceTree = "<group>"; };
 		FAAABFD12491AF3C00B82268 /* AccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRepository.swift; sourceTree = "<group>"; };
+		FAEF36EF2492A1F200E97DDD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			children = (
 				FA495D96249046AA005B9963 /* AppDelegate.swift */,
 				FA495DCC249048BA005B9963 /* SceneDelegate.swift */,
+				FAEF36EE2492A1D900E97DDD /* Base */,
 				FA495DB824904792005B9963 /* Register */,
 				FA495DBC249047AB005B9963 /* Login */,
 				FA495DB9249047AA005B9963 /* Users */,
@@ -331,6 +334,14 @@
 				FAAABFC92491447500B82268 /* AddressCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		FAEF36EE2492A1D900E97DDD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FAEF36EF2492A1F200E97DDD /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -524,6 +535,7 @@
 				FA93657B249110D900E51C0D /* UserRepository.swift in Sources */,
 				FAAABFCA2491447500B82268 /* AddressCell.swift in Sources */,
 				FA495DDD24904A9B005B9963 /* IUserDetailsViewModel.swift in Sources */,
+				FAEF36F02492A1F200E97DDD /* BaseViewController.swift in Sources */,
 				FA9365852491218D00E51C0D /* Address.swift in Sources */,
 				FA9365812491119800E51C0D /* CartrackConstants.swift in Sources */,
 				FA495DC924904881005B9963 /* RegisterViewController.swift in Sources */,

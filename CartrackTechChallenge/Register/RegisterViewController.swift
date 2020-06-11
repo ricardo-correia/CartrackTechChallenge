@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal class RegisterViewController: UIViewController {
+internal class RegisterViewController: BaseViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var image: UIImageView!
@@ -17,7 +17,6 @@ internal class RegisterViewController: UIViewController {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var countryButton: UIButton!
-    @IBOutlet weak var registerButton: UIButton!
     
     // MARK: - Internal Attributes
     internal var registerViewModel: IRegisterViewModel?

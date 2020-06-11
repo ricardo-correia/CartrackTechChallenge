@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var image: UIImageView!
@@ -17,8 +17,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var registerButton: UIButton!
-    
     
     // MARK: - Internal Attributes
     internal var loginViewModel: ILoginViewModel?

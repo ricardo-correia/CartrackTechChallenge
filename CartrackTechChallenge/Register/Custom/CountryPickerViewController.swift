@@ -24,6 +24,11 @@ internal class CountryPickerViewController: UIViewController, UIPickerViewDelega
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
     }
+    
+    @IBAction func didPressSaveButton(_ sender: Any) {
+        //TODO: Save data
+        self.dismiss(animated: true)
+    }
 }
 
 // MARK: - PickerView delegate and datasource
