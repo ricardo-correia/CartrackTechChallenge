@@ -24,12 +24,12 @@ internal class AccountService: IAccountService {
         self.countryRepository = countryRepository
     }
     
-    internal func login(username: String, password: String) {
-        self.accountRepository?.login(username: username, password: password)
+    internal func login(username: String, password: String) -> Bool? {
+        return self.accountRepository?.login(username: username, password: password)
     }
     
-    internal func register(username: String, password: String, countryId: Int) {
-        self.accountRepository?.register(username: username, password: password, countryId: countryId)
+    internal func register(username: String, password: String, countryId: Int) -> Bool? {
+        return self.accountRepository?.register(username: username, password: password, countryId: countryId)
     }
     
     func getCountryList() -> [Country] {

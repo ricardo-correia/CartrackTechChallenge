@@ -9,6 +9,6 @@
 import Foundation
 
 internal protocol IRegisterViewModel {
-
+    func register(username: String?, password: String?, countryId: Int?)
     func getCountryList() -> [Country]
 }

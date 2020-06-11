@@ -8,7 +8,11 @@
 
 import UIKit
 
-internal class RegisterViewController: BaseViewController {
+internal protocol PickerViewDelegate {
+    func didSelectCountry(countryId: Int)
+}
+
+internal class RegisterViewController: BaseViewController, PickerViewDelegate {
     
     // MARK: - IBOutlets
     @IBOutlet weak var image: UIImageView!
@@ -21,6 +25,9 @@ internal class RegisterViewController: BaseViewController {
     // MARK: - Internal Attributes
     internal var registerViewModel: IRegisterViewModel?
     
+    // MARK: - Private Attributes
+    private var selectedCountryId: Int?
+    
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,15 +35,20 @@ internal class RegisterViewController: BaseViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         guard let viewController = segue.destination as? CountryPickerViewController else {
             return
         }
        
         let countries = self.registerViewModel?.getCountryList()
         viewController.countries = countries
+        viewController.delegate = self
+    }
+    
+    func didSelectCountry(countryId: Int) {
+        self.selectedCountryId = countryId
     }
     
     @IBAction func didPressRegisterButton(_ sender: Any) {
+        self.registerViewModel?.register(username: username.text, password: password.text, countryId: selectedCountryId)
     }
 }

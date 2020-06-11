@@ -15,6 +15,7 @@ internal class CountryPickerViewController: UIViewController, UIPickerViewDelega
     @IBOutlet weak var pickerView: UIPickerView!
     
     // MARK: Internal Attributes
+    internal var delegate: PickerViewDelegate?
     internal var countries: [Country]?
     
     // MARK: - View Lifecycle
@@ -26,7 +27,8 @@ internal class CountryPickerViewController: UIViewController, UIPickerViewDelega
     }
     
     @IBAction func didPressSaveButton(_ sender: Any) {
-        //TODO: Save data
+        let index = pickerView.selectedRow(inComponent: 0)
+        self.delegate?.didSelectCountry(countryId: countries?[index].id ?? 0)
         self.dismiss(animated: true)
     }
 }

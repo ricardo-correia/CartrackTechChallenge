@@ -9,13 +9,17 @@
 import Foundation
 
 internal class LoginViewModel: ILoginViewModel {
-    
+   
     // MARK: - Internal Attributes
     internal var accountService: IAccountService?
          
-    
     // MARK: - Default constructor
     init(with accountService: IAccountService?) {
         self.accountService = accountService
+    }
+    
+    internal func login(username: String, password: String) {
+        //TODO: Verify if all data is properly filled
+        self.accountService?.login(username: username, password: password)
     }
 }

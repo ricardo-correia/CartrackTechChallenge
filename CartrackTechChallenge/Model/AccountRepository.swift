@@ -27,16 +27,13 @@ internal class AccountRepository: BaseSQLiteRepository, IAccountRepository {
         
         self.db = openDatabase()
         self.createAccountTable()
-        
-        self.insert(username: "test", password: "test", countryId: 3)
-        self.usernameExists(username: "test")
     }
     
-    internal func login(username: String, password: String) -> Bool {
+    internal func login(username: String, password: String) -> Bool? {
         return self.validateLoginInfo(username: username, password: password)
     }
     
-    internal func register(username: String, password: String, countryId: Int) -> Bool {
+    internal func register(username: String, password: String, countryId: Int) -> Bool? {
         if usernameExists(username: username) {
             return false
         }
