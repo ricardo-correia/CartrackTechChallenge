@@ -10,6 +10,16 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var loginTitle: UILabel!
+    @IBOutlet weak var loginDescription: UILabel!
+    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    
+    
     // MARK: - Internal Attributes
     internal var loginViewModel: ILoginViewModel?
     

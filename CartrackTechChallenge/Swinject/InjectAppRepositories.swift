@@ -17,5 +17,15 @@ public class InjectAppRepositories: Assembly {
         container.register(IUserRepository.self) { _ in
             return UserRepository()
         }
+        
+        // IAccountRepository
+        container.register(IAccountRepository.self) { _ in
+            return AccountRepository()
+        }
+        
+        // ICountryRepository
+        container.register(ICountryRepository.self) { _ in
+            return CountryRepository()
+        }
     }
 }

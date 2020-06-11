@@ -13,12 +13,14 @@ public class InjectAppViewModels: Assembly {
 
         // ILoginViewModel
         container.register(ILoginViewModel.self) { _ in
-            return LoginViewModel()
+            let accountService = container.resolve(IAccountService.self)
+            return LoginViewModel(with: accountService)
         }
         
         // IRegisterViewModel
         container.register(IRegisterViewModel.self) { _ in
-            return RegisterViewModel()
+            let accountService = container.resolve(IAccountService.self)
+            return RegisterViewModel(with: accountService)
         }
         
         // IUserListViewModel

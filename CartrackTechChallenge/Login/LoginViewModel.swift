@@ -10,4 +10,12 @@ import Foundation
 
 internal class LoginViewModel: ILoginViewModel {
     
+    // MARK: - Internal Attributes
+    internal var accountService: IAccountService?
+         
+    
+    // MARK: - Default constructor
+    init(with accountService: IAccountService?) {
+        self.accountService = accountService
+    }
 }

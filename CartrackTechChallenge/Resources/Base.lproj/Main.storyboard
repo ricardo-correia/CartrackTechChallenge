@@ -47,7 +47,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="df3-gc-byE" customClass="DTXButton" customModule="CartrackTechChallenge" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="df3-gc-byE">
                                         <rect key="frame" x="64" y="560" width="246" height="45"/>
                                         <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration" identifier="welcome_main_dtxbutton_01"/>
@@ -104,6 +104,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="VMd-FP-XfT"/>
+                    <connections>
+                        <outlet property="image" destination="cR2-F0-u5E" id="0wa-lI-Wek"/>
+                        <outlet property="loginButton" destination="df3-gc-byE" id="nbh-PB-nCy"/>
+                        <outlet property="loginDescription" destination="EBQ-hc-EzG" id="qxL-Ll-CUU"/>
+                        <outlet property="loginTitle" destination="vth-DD-wOh" id="UwJ-QD-qfa"/>
+                        <outlet property="password" destination="Iaz-cw-pwd" id="bYr-By-haM"/>
+                        <outlet property="registerButton" destination="z1h-PQ-6hE" id="XRH-xM-2Q0"/>
+                        <outlet property="username" destination="8Yb-k6-Nkz" id="F3j-Ve-sKH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -149,8 +158,17 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guU-Fn-pIA" customClass="DTXButton" customModule="CartrackTechChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="64" y="560" width="246" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0s-QQ-8hH">
+                                        <rect key="frame" x="65" y="545" width="264" height="30"/>
+                                        <state key="normal" title="Country Selection"/>
+                                        <connections>
+                                            <segue destination="ENZ-Ji-y8n" kind="popoverPresentation" popoverAnchorView="g0s-QQ-8hH" id="JFP-g3-oy9">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guU-Fn-pIA">
+                                        <rect key="frame" x="64" y="595" width="246" height="45"/>
                                         <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration" identifier="welcome_main_dtxbutton_01"/>
                                         <constraints>
@@ -163,12 +181,16 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="buttonFilled" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressRegisterButton:" destination="9BU-jV-f7n" eventType="touchUpInside" id="kfA-Fy-1ov"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="deL-Pg-FXD" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="40" id="2dT-6f-Hh2"/>
                                     <constraint firstItem="guU-Fn-pIA" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="64" id="8cM-Ux-4Yf"/>
+                                    <constraint firstItem="guU-Fn-pIA" firstAttribute="top" secondItem="g0s-QQ-8hH" secondAttribute="bottom" constant="20" id="9ZV-Ps-NUB"/>
                                     <constraint firstAttribute="trailing" secondItem="guU-Fn-pIA" secondAttribute="trailing" constant="64" id="DMs-tb-ccR"/>
                                     <constraint firstItem="CcE-Oa-gBl" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="40" id="ErR-oQ-0zp"/>
                                     <constraint firstAttribute="trailing" secondItem="CcE-Oa-gBl" secondAttribute="trailing" constant="40" id="J3R-lV-3sD"/>
@@ -177,13 +199,15 @@
                                     <constraint firstItem="deL-Pg-FXD" firstAttribute="top" secondItem="Sby-tF-a4q" secondAttribute="bottom" constant="20" id="Ys2-Iy-AzI"/>
                                     <constraint firstItem="Sby-tF-a4q" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="40" id="a5b-oe-ea2"/>
                                     <constraint firstItem="GBS-Fd-8iY" firstAttribute="top" secondItem="deL-Pg-FXD" secondAttribute="bottom" constant="20" id="a6M-ZW-tKt"/>
+                                    <constraint firstItem="g0s-QQ-8hH" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="65" id="bgW-Oe-yoM"/>
+                                    <constraint firstItem="g0s-QQ-8hH" firstAttribute="top" secondItem="OWl-2Z-XMv" secondAttribute="bottom" constant="16" id="fyT-Hp-qRQ"/>
                                     <constraint firstItem="Sby-tF-a4q" firstAttribute="top" secondItem="CcE-Oa-gBl" secondAttribute="bottom" constant="30" id="lj6-XG-sdd"/>
-                                    <constraint firstItem="guU-Fn-pIA" firstAttribute="top" secondItem="OWl-2Z-XMv" secondAttribute="bottom" constant="31" id="oI3-jB-Aml"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="smX-Oe-d5q" firstAttribute="trailing" secondItem="g0s-QQ-8hH" secondAttribute="trailing" constant="65" id="1ku-7v-PuR"/>
                             <constraint firstItem="3b1-RT-rkg" firstAttribute="leading" secondItem="smX-Oe-d5q" secondAttribute="leading" constant="20" id="Fzd-XX-ew3"/>
                             <constraint firstItem="3b1-RT-rkg" firstAttribute="trailing" secondItem="smX-Oe-d5q" secondAttribute="trailing" constant="-20" id="PA4-4q-dIw"/>
                             <constraint firstItem="smX-Oe-d5q" firstAttribute="bottom" secondItem="3b1-RT-rkg" secondAttribute="bottom" constant="20" id="glZ-mW-37W"/>
@@ -192,10 +216,49 @@
                         <viewLayoutGuide key="safeArea" id="smX-Oe-d5q"/>
                     </view>
                     <navigationItem key="navigationItem" id="oiX-6A-6Sj"/>
+                    <connections>
+                        <outlet property="RegisterButton" destination="guU-Fn-pIA" id="ym6-0B-izq"/>
+                        <outlet property="countryButton" destination="g0s-QQ-8hH" id="yo5-GK-vPr"/>
+                        <outlet property="image" destination="CcE-Oa-gBl" id="6FF-Pe-dwI"/>
+                        <outlet property="password" destination="OWl-2Z-XMv" id="BJu-iV-J3n"/>
+                        <outlet property="registerButton" destination="guU-Fn-pIA" id="bbh-a4-6my"/>
+                        <outlet property="registerDescription" destination="deL-Pg-FXD" id="KEv-aY-VvN"/>
+                        <outlet property="registerTitle" destination="Sby-tF-a4q" id="50f-Q5-Gkw"/>
+                        <outlet property="username" destination="GBS-Fd-8iY" id="bGL-qn-4uC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="85V-YI-zTK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1858" y="433"/>
+            <point key="canvasLocation" x="1857.9710144927537" y="432.58928571428572"/>
+        </scene>
+        <!--Country Picker View Controller-->
+        <scene sceneID="whO-46-WEM">
+            <objects>
+                <viewController id="ENZ-Ji-y8n" customClass="CountryPickerViewController" customModule="CartrackTechChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SfV-oT-cSf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cf-5Q-7ET">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3cf-5Q-7ET" firstAttribute="leading" secondItem="i5u-at-hk7" secondAttribute="leading" id="BGR-7A-Zgb"/>
+                            <constraint firstItem="i5u-at-hk7" firstAttribute="bottom" secondItem="3cf-5Q-7ET" secondAttribute="bottom" id="KPq-k0-KFf"/>
+                            <constraint firstItem="i5u-at-hk7" firstAttribute="trailing" secondItem="3cf-5Q-7ET" secondAttribute="trailing" id="lWF-ox-DaS"/>
+                            <constraint firstItem="3cf-5Q-7ET" firstAttribute="top" secondItem="i5u-at-hk7" secondAttribute="top" id="w2p-fJ-4JU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i5u-at-hk7"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="3cf-5Q-7ET" id="Ki6-hq-aL2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nKo-dg-JjE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2654" y="435"/>
         </scene>
         <!--User List View Controller-->
         <scene sceneID="4wO-QU-Th3">

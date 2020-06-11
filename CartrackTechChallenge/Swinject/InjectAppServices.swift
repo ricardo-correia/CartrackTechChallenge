@@ -16,5 +16,12 @@ public class InjectAppServices: Assembly {
             let repository = container.resolve(IUserRepository.self)
             return UserService(with: repository)
         }
+        
+        // IAccountService
+        container.register(IAccountService.self) { _ in
+            let accountRepository = container.resolve(IAccountRepository.self)
+            let countrytRepository = container.resolve(ICountryRepository.self)
+            return AccountService(with: accountRepository, countryRepository: countrytRepository)
+        }
     }
 }
