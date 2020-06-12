@@ -23,6 +23,12 @@ public class InjectAppViewModels: Assembly {
             return RegisterViewModel(with: accountService)
         }
         
+        // ICountryPickerViewModel
+        container.register(ICountryPickerViewModel.self) { _ in
+            let accountService = container.resolve(IAccountService.self)
+            return CountryPickerViewModel(with: accountService)
+        }
+        
         // IUserListViewModel
         container.register(IUserListViewModel.self) { _ in
             let userService = container.resolve(IUserService.self)

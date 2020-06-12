@@ -9,7 +9,7 @@
 import UIKit
 
 internal protocol PickerViewDelegate {
-    func didSelectCountry(countryId: Int)
+    func didSelectCountry(country: Country?)
 }
 
 internal class RegisterViewController: BaseViewController, PickerViewDelegate, UITextFieldDelegate {
@@ -56,15 +56,12 @@ internal class RegisterViewController: BaseViewController, PickerViewDelegate, U
             return
         }
        
-        let countries = self.registerViewModel?.getCountryList()
-        viewController.countries = countries
         viewController.delegate = self
     }
     
-    func didSelectCountry(countryId: Int) {
-        let title = self.registerViewModel?.getCountry(countryId: countryId)
-        self.countryButton.setTitle(title, for: .normal)
-        self.selectedCountryId = countryId
+    func didSelectCountry(country: Country?) {
+        self.countryButton.setTitle(country?.name, for: .normal)
+        self.selectedCountryId = country?.id
         self.validateData()
     }
     

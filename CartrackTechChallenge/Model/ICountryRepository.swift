@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import RxSwift
 
 internal protocol ICountryRepository {
-    func getCountryList() -> [Country]
+    func getCountryList() -> Observable<[Country]>
 }

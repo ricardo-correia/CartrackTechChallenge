@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2B88806E64956683C9A18D55 /* Pods_CartrackTechChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449AE8E7D7B15758A75CD56A /* Pods_CartrackTechChallengeTests.framework */; };
 		6FAA04A468CF727DCABF521B /* Pods_CartrackTechChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967C589DB47CEB780F52B557 /* Pods_CartrackTechChallenge.framework */; };
+		FA0E54DD2493D44B001910D5 /* ICountryPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E54DC2493D44B001910D5 /* ICountryPickerViewModel.swift */; };
+		FA0E54DF2493D467001910D5 /* CountryPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E54DE2493D467001910D5 /* CountryPickerViewModel.swift */; };
 		FA11D7AF2492516F002AAD87 /* BaseSQLiteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11D7AE2492516F002AAD87 /* BaseSQLiteRepository.swift */; };
 		FA11D7B124926478002AAD87 /* ICountryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11D7B024926478002AAD87 /* ICountryRepository.swift */; };
 		FA11D7B324926488002AAD87 /* CountryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11D7B224926488002AAD87 /* CountryRepository.swift */; };
@@ -76,6 +78,8 @@
 		90CFB551A88D0A2EB9ED8526 /* Pods-CartrackTechChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartrackTechChallenge.debug.xcconfig"; path = "Target Support Files/Pods-CartrackTechChallenge/Pods-CartrackTechChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		967C589DB47CEB780F52B557 /* Pods_CartrackTechChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CartrackTechChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D173618973B34951CE3EEE17 /* Pods-CartrackTechChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartrackTechChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-CartrackTechChallengeTests/Pods-CartrackTechChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA0E54DC2493D44B001910D5 /* ICountryPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICountryPickerViewModel.swift; sourceTree = "<group>"; };
+		FA0E54DE2493D467001910D5 /* CountryPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerViewModel.swift; sourceTree = "<group>"; };
 		FA11D7AE2492516F002AAD87 /* BaseSQLiteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSQLiteRepository.swift; sourceTree = "<group>"; };
 		FA11D7B024926478002AAD87 /* ICountryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICountryRepository.swift; sourceTree = "<group>"; };
 		FA11D7B224926488002AAD87 /* CountryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRepository.swift; sourceTree = "<group>"; };
@@ -243,6 +247,9 @@
 				FA495DC824904881005B9963 /* RegisterViewController.swift */,
 				FA495DC624904871005B9963 /* IRegisterViewModel.swift */,
 				FA495DCA24904893005B9963 /* RegisterViewModel.swift */,
+				FA11D7B924928AFB002AAD87 /* CountryPickerViewController.swift */,
+				FA0E54DC2493D44B001910D5 /* ICountryPickerViewModel.swift */,
+				FA0E54DE2493D467001910D5 /* CountryPickerViewModel.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -569,6 +576,7 @@
 				FA936583249112EC00E51C0D /* InjectAppRepositories.swift in Sources */,
 				FA93657E249110FB00E51C0D /* IUserRepository.swift in Sources */,
 				FAAABFCC2491AE7D00B82268 /* IAccountService.swift in Sources */,
+				FA0E54DF2493D467001910D5 /* CountryPickerViewModel.swift in Sources */,
 				FA495DE724904BF7005B9963 /* SwinjectStoryboard+Inject.swift in Sources */,
 				FA495DE624904BF7005B9963 /* InjectAppServices.swift in Sources */,
 				FA495D97249046AA005B9963 /* AppDelegate.swift in Sources */,
@@ -584,6 +592,7 @@
 				FA11D7B124926478002AAD87 /* ICountryRepository.swift in Sources */,
 				FA495DCF249048E2005B9963 /* IUserService.swift in Sources */,
 				FA495DC52490485E005B9963 /* LoginViewModel.swift in Sources */,
+				FA0E54DD2493D44B001910D5 /* ICountryPickerViewModel.swift in Sources */,
 				FA93658C24912CD500E51C0D /* UserListCell.swift in Sources */,
 				FA93657924910D8500E51C0D /* User.swift in Sources */,
 				FA15B0282493B42F00E7506B /* CartrackTextField.swift in Sources */,

@@ -22,6 +22,11 @@ extension SwinjectStoryboard {
             c.registerViewModel = r.resolve(IRegisterViewModel.self)
         }
         
+        // CountryPickerViewController
+        defaultContainer.storyboardInitCompleted(CountryPickerViewController.self) { r, c in
+            c.pickerViewModel = r.resolve(ICountryPickerViewModel.self)
+        }
+        
         // UserListViewController
         defaultContainer.storyboardInitCompleted(UserListViewController.self) { r, c in
             c.userListViewModel = r.resolve(IUserListViewModel.self)

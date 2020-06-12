@@ -7,9 +7,9 @@
 //
 
 import Foundation
+import RxSwift
 
 internal protocol IRegisterViewModel {
+    // MARK: - Functions
     func register(username: String?, password: String?, countryId: Int?) -> Bool
-    func getCountryList() -> [Country]
-    func getCountry(countryId: Int) -> String
 }

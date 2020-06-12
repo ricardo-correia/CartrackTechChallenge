@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import RxSwift
+import RxCocoa
 
 internal class CountryPickerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     
@@ -15,8 +17,12 @@ internal class CountryPickerViewController: UIViewController, UIPickerViewDelega
     @IBOutlet weak var pickerView: UIPickerView!
     
     // MARK: Internal Attributes
+    internal var pickerViewModel: ICountryPickerViewModel?
     internal var delegate: PickerViewDelegate?
     internal var countries: [Country]?
+    
+    //MARK: - Private Attributes
+    private var disposeBag = DisposeBag()
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -24,11 +30,21 @@ internal class CountryPickerViewController: UIViewController, UIPickerViewDelega
         
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
+        
+        self.bindObservableVariables()
+    }
+    
+    private func bindObservableVariables() {
+        self.pickerViewModel?.countryList.asObservable()
+            .bind { list in
+                self.countries = list
+                self.pickerView.reloadAllComponents()
+            }.disposed(by: disposeBag)
     }
     
     @IBAction func didPressSaveButton(_ sender: Any) {
         let index = pickerView.selectedRow(inComponent: 0)
-        self.delegate?.didSelectCountry(countryId: countries?[index].id ?? 0)
+        self.delegate?.didSelectCountry(country: countries?[index])
         self.dismiss(animated: true)
     }
 }

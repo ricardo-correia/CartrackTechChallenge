@@ -32,7 +32,7 @@ internal class AccountService: IAccountService {
         return self.accountRepository?.register(username: username, password: password, countryId: countryId)
     }
     
-    func getCountryList() -> [Country] {
-        return self.countryRepository?.getCountryList() ?? []
+    func getCountryList() -> Observable<[Country]> {
+        return (self.countryRepository?.getCountryList())!
     }
 }

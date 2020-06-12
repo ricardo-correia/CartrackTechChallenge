@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 import SQLite3
 
 internal class CountryRepository: BaseSQLiteRepository, ICountryRepository {
@@ -31,8 +32,13 @@ internal class CountryRepository: BaseSQLiteRepository, ICountryRepository {
         }
     }
     
-    internal func getCountryList() -> [Country] {
-        return self.getCountries()
+    internal func getCountryList() -> Observable<[Country]>{
+        return Observable.create { observer in
+            let countries = self.getCountries()
+            observer.onNext(countries)
+            observer.onCompleted()
+            return Disposables.create {}
+        }
     }
     
     private func createCountryData() {

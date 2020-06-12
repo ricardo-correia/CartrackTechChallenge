@@ -17,9 +17,9 @@ internal class UserListViewController: UITableViewController {
     internal var userListViewModel: IUserListViewModel?
     
     // MARK: - Private Attributes
+    private var spinner: UIActivityIndicatorView?
     private var userList: [User] = []
     private let disposeBag = DisposeBag()
-    private var spinner: UIActivityIndicatorView?
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
