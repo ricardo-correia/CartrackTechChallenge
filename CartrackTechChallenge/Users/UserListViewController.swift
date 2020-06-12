@@ -19,6 +19,7 @@ internal class UserListViewController: UITableViewController {
     // MARK: - Private Attributes
     private var userList: [User] = []
     private let disposeBag = DisposeBag()
+    private var spinner: UIActivityIndicatorView?
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -26,6 +27,11 @@ internal class UserListViewController: UITableViewController {
         
         self.bindObservableVariables()
         self.userListViewModel?.loadData()
+        
+        spinner = UIActivityIndicatorView(style: .medium)
+        spinner?.hidesWhenStopped = true
+        spinner?.startAnimating()
+        self.tableView.backgroundView = spinner
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -42,6 +48,7 @@ internal class UserListViewController: UITableViewController {
             .bind { list in
                 self.userList = list
                 self.tableView.reloadData()
+                self.spinner?.stopAnimating()
             }.disposed(by: disposeBag)
     }
 }
