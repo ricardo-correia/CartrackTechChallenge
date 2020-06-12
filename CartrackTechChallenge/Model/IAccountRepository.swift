@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 internal protocol IAccountRepository {
     func login(username: String, password: String) -> Bool?

@@ -50,13 +50,25 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     
     @IBAction func didPressLoginButton(_ sender: Any) {
         if self.loginViewModel?.login(username: username.text ?? "", password: password.text ?? "") == true {
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController = storyBoard.instantiateViewController(withIdentifier: "UserListNavigationController")
-            viewController.modalPresentationStyle = .fullScreen
-            self.present(viewController, animated: true, completion: {
-                self.navigationController?.popViewController(animated: false)
-            })
+            self.launchUserListViewController()
+        } else {
+            self.presentAlertController()
         }
+    }
+    
+    private func launchUserListViewController() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "UserListNavigationController")
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true, completion: {
+            self.navigationController?.popViewController(animated: false)
+        })
+    }
+    
+    private func presentAlertController() {
+        let alert = UIAlertController(title: "Login Failed", message: "Incorrect username or password", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
     }
 }
 

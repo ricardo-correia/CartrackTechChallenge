@@ -31,7 +31,6 @@ final class CartrackTextField: UITextField {
     }
 
     func setup() {
-        font = UIFont(name: "AvenirNext-Regular", size: 16)
         textColor = UIColor(named: "text")
         tintColor = UIColor(named: "cartrackTextFieldBorder") ?? .black
 

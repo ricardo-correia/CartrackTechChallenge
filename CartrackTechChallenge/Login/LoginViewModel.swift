@@ -19,7 +19,6 @@ internal class LoginViewModel: ILoginViewModel {
     }
     
     internal func login(username: String, password: String) -> Bool {
-        //TODO: Verify if all data is properly filled
         return self.accountService?.login(username: username, password: password) ?? false
     }
 }

@@ -35,7 +35,6 @@ final class CartrackButton: UIButton {
 
     // Button layout setup according to the buttonFilled flag
     func setup() {
-        titleLabel?.font = UIFont(name: "AvenirNext-Bold", size: 16)
         titleLabel?.textColor = buttonFilled ?
             UIColor(named: "cartrackFilledbuttonTitleText") :
             UIColor(named: "cartrackBorderedButtonTitleText")

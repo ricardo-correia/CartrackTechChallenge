@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -160,22 +161,13 @@
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="OWl-2Z-XMv" customClass="CartrackTextField" customModule="CartrackTechChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="66" y="471" width="244" height="34"/>
+                                        <rect key="frame" x="64" y="471" width="244" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0s-QQ-8hH">
-                                        <rect key="frame" x="64" y="513" width="246" height="30"/>
-                                        <state key="normal" title="Country Selection"/>
-                                        <connections>
-                                            <segue destination="ENZ-Ji-y8n" kind="popoverPresentation" popoverAnchorView="g0s-QQ-8hH" id="JFP-g3-oy9">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guU-Fn-pIA" customClass="CartrackButton" customModule="CartrackTechChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="60" y="563" width="254" height="45"/>
+                                        <rect key="frame" x="64" y="577" width="244" height="45"/>
                                         <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration" identifier="welcome_main_dtxbutton_01"/>
                                         <constraints>
@@ -192,21 +184,32 @@
                                             <action selector="didPressRegisterButton:" destination="9BU-jV-f7n" eventType="touchUpInside" id="kfA-Fy-1ov"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0s-QQ-8hH">
+                                        <rect key="frame" x="64" y="525" width="244" height="32"/>
+                                        <color key="backgroundColor" name="cartrackButtonShadow"/>
+                                        <fontDescription key="fontDescription" name=".SFNSText" family=".SF NS Text" pointSize="18"/>
+                                        <state key="normal" title="Country Selection"/>
+                                        <connections>
+                                            <segue destination="ENZ-Ji-y8n" kind="popoverPresentation" popoverAnchorView="g0s-QQ-8hH" id="JFP-g3-oy9">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="deL-Pg-FXD" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="40" id="2dT-6f-Hh2"/>
-                                    <constraint firstItem="guU-Fn-pIA" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="60" id="8cM-Ux-4Yf"/>
-                                    <constraint firstAttribute="trailing" secondItem="guU-Fn-pIA" secondAttribute="trailing" constant="60" id="DMs-tb-ccR"/>
+                                    <constraint firstItem="guU-Fn-pIA" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="64" id="8cM-Ux-4Yf"/>
+                                    <constraint firstAttribute="trailing" secondItem="guU-Fn-pIA" secondAttribute="trailing" constant="66" id="DMs-tb-ccR"/>
                                     <constraint firstItem="Byq-Vt-7VA" firstAttribute="top" secondItem="3b1-RT-rkg" secondAttribute="top" constant="154" id="EhC-CG-VVW"/>
                                     <constraint firstItem="guU-Fn-pIA" firstAttribute="top" secondItem="g0s-QQ-8hH" secondAttribute="bottom" constant="20" id="P5u-Gh-gLN"/>
                                     <constraint firstAttribute="trailing" secondItem="deL-Pg-FXD" secondAttribute="trailing" constant="40" id="PNS-yz-Koy"/>
                                     <constraint firstItem="deL-Pg-FXD" firstAttribute="top" secondItem="Sby-tF-a4q" secondAttribute="bottom" constant="22" id="SX7-J3-89b"/>
-                                    <constraint firstItem="g0s-QQ-8hH" firstAttribute="top" secondItem="OWl-2Z-XMv" secondAttribute="bottom" constant="8" id="SgS-hF-Ux0"/>
+                                    <constraint firstItem="g0s-QQ-8hH" firstAttribute="top" secondItem="OWl-2Z-XMv" secondAttribute="bottom" constant="20" id="SgS-hF-Ux0"/>
                                     <constraint firstAttribute="trailing" secondItem="Sby-tF-a4q" secondAttribute="trailing" constant="40" id="Xfh-yb-cDx"/>
                                     <constraint firstItem="Byq-Vt-7VA" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="8" id="Zn3-gl-Tln"/>
                                     <constraint firstItem="Sby-tF-a4q" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="40" id="a5b-oe-ea2"/>
-                                    <constraint firstItem="g0s-QQ-8hH" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="60" id="bgW-Oe-yoM"/>
+                                    <constraint firstItem="g0s-QQ-8hH" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="64" id="bgW-Oe-yoM"/>
                                     <constraint firstItem="GBS-Fd-8iY" firstAttribute="top" secondItem="deL-Pg-FXD" secondAttribute="bottom" constant="20" id="hAX-VG-WGO"/>
                                     <constraint firstAttribute="trailing" secondItem="Byq-Vt-7VA" secondAttribute="trailing" constant="8" id="j11-5k-tKO"/>
                                     <constraint firstItem="Sby-tF-a4q" firstAttribute="top" secondItem="Byq-Vt-7VA" secondAttribute="bottom" constant="-20" id="lZP-ic-6Mk"/>
@@ -215,7 +218,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="smX-Oe-d5q" firstAttribute="trailing" secondItem="g0s-QQ-8hH" secondAttribute="trailing" constant="60" id="1ku-7v-PuR"/>
+                            <constraint firstItem="smX-Oe-d5q" firstAttribute="trailing" secondItem="g0s-QQ-8hH" secondAttribute="trailing" constant="86" id="1ku-7v-PuR"/>
                             <constraint firstItem="3b1-RT-rkg" firstAttribute="leading" secondItem="smX-Oe-d5q" secondAttribute="leading" constant="20" id="Fzd-XX-ew3"/>
                             <constraint firstItem="3b1-RT-rkg" firstAttribute="trailing" secondItem="smX-Oe-d5q" secondAttribute="trailing" constant="-20" id="PA4-4q-dIw"/>
                             <constraint firstItem="smX-Oe-d5q" firstAttribute="bottom" secondItem="3b1-RT-rkg" secondAttribute="bottom" constant="20" id="glZ-mW-37W"/>
@@ -582,5 +585,8 @@
     <resources>
         <image name="banner" width="870" height="405"/>
         <image name="default_user" width="300" height="300"/>
+        <namedColor name="cartrackButtonShadow">
+            <color red="0.83899998664855957" green="0.87099999189376831" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
