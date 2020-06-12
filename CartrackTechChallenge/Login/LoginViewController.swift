@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: BaseViewController {
+class LoginViewController: BaseViewController, UITextFieldDelegate {
 
     // MARK: - IBOutlets
     @IBOutlet weak var image: UIImageView!
@@ -25,6 +25,38 @@ class LoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.setupButton(to: false)
+        
+        username.delegate = self
+        username.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        
+        password.delegate = self
+        password.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+    }
+    
+    func setupButton(to state: Bool) {
+        // Checks for the ok button's current state and updates it accordingly
+        loginButton.alpha = state ? 1.0 : 0.25
+        loginButton.isEnabled = state
+    }
+    
+    @objc func textFieldDidChange() {
+        if username.text != "" && password.text != "" {
+            self.setupButton(to: true)
+        } else {
+            self.setupButton(to: false)
+        }
+    }
+    
+    @IBAction func didPressLoginButton(_ sender: Any) {
+        if self.loginViewModel?.login(username: username.text ?? "", password: password.text ?? "") == true {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyBoard.instantiateViewController(withIdentifier: "UserListNavigationController")
+            viewController.modalPresentationStyle = .fullScreen
+            self.present(viewController, animated: true, completion: {
+                self.navigationController?.popViewController(animated: false)
+            })
+        }
     }
 }
 

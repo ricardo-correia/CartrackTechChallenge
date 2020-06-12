@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46679C6F6EA344D09D00E315 /* Pods_CartrackTechChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F943DEA464BE72F3054344 /* Pods_CartrackTechChallengeTests.framework */; };
-		F035FF43D96C233CF7B7D3CF /* Pods_CartrackTechChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF916B4E5630DB770BD15610 /* Pods_CartrackTechChallenge.framework */; };
+		2B88806E64956683C9A18D55 /* Pods_CartrackTechChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449AE8E7D7B15758A75CD56A /* Pods_CartrackTechChallengeTests.framework */; };
+		6FAA04A468CF727DCABF521B /* Pods_CartrackTechChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967C589DB47CEB780F52B557 /* Pods_CartrackTechChallenge.framework */; };
 		FA11D7AF2492516F002AAD87 /* BaseSQLiteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11D7AE2492516F002AAD87 /* BaseSQLiteRepository.swift */; };
 		FA11D7B124926478002AAD87 /* ICountryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11D7B024926478002AAD87 /* ICountryRepository.swift */; };
 		FA11D7B324926488002AAD87 /* CountryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11D7B224926488002AAD87 /* CountryRepository.swift */; };
 		FA11D7B524927627002AAD87 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11D7B424927627002AAD87 /* Country.swift */; };
 		FA11D7BA24928AFB002AAD87 /* CountryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11D7B924928AFB002AAD87 /* CountryPickerViewController.swift */; };
+		FA15B0262493B42500E7506B /* CartrackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA15B0252493B42500E7506B /* CartrackButton.swift */; };
+		FA15B0282493B42F00E7506B /* CartrackTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA15B0272493B42F00E7506B /* CartrackTextField.swift */; };
 		FA495D97249046AA005B9963 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495D96249046AA005B9963 /* AppDelegate.swift */; };
 		FA495D9B249046AA005B9963 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495D9A249046AA005B9963 /* LoginViewController.swift */; };
 		FA495D9E249046AA005B9963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA495D9C249046AA005B9963 /* Main.storyboard */; };
@@ -68,17 +70,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11CE474BC04B9D7896342A26 /* Pods-CartrackTechChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartrackTechChallenge.release.xcconfig"; path = "Target Support Files/Pods-CartrackTechChallenge/Pods-CartrackTechChallenge.release.xcconfig"; sourceTree = "<group>"; };
-		4C41277BD76B349D02DC9E8B /* Pods-CartrackTechChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartrackTechChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-CartrackTechChallengeTests/Pods-CartrackTechChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
-		70EB27ACE8DFB7CDCEA94CB5 /* Pods-CartrackTechChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartrackTechChallenge.debug.xcconfig"; path = "Target Support Files/Pods-CartrackTechChallenge/Pods-CartrackTechChallenge.debug.xcconfig"; sourceTree = "<group>"; };
-		70F943DEA464BE72F3054344 /* Pods_CartrackTechChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CartrackTechChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AEBAA4B5E2A1D1891E39D329 /* Pods-CartrackTechChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartrackTechChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-CartrackTechChallengeTests/Pods-CartrackTechChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AF916B4E5630DB770BD15610 /* Pods_CartrackTechChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CartrackTechChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4175E45F64B95EB6D429A1CD /* Pods-CartrackTechChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartrackTechChallenge.release.xcconfig"; path = "Target Support Files/Pods-CartrackTechChallenge/Pods-CartrackTechChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		449AE8E7D7B15758A75CD56A /* Pods_CartrackTechChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CartrackTechChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74818A06BA40F013D5F80F40 /* Pods-CartrackTechChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartrackTechChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-CartrackTechChallengeTests/Pods-CartrackTechChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		90CFB551A88D0A2EB9ED8526 /* Pods-CartrackTechChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartrackTechChallenge.debug.xcconfig"; path = "Target Support Files/Pods-CartrackTechChallenge/Pods-CartrackTechChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		967C589DB47CEB780F52B557 /* Pods_CartrackTechChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CartrackTechChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D173618973B34951CE3EEE17 /* Pods-CartrackTechChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartrackTechChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-CartrackTechChallengeTests/Pods-CartrackTechChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA11D7AE2492516F002AAD87 /* BaseSQLiteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSQLiteRepository.swift; sourceTree = "<group>"; };
 		FA11D7B024926478002AAD87 /* ICountryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICountryRepository.swift; sourceTree = "<group>"; };
 		FA11D7B224926488002AAD87 /* CountryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRepository.swift; sourceTree = "<group>"; };
 		FA11D7B424927627002AAD87 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		FA11D7B924928AFB002AAD87 /* CountryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerViewController.swift; sourceTree = "<group>"; };
+		FA15B0252493B42500E7506B /* CartrackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartrackButton.swift; sourceTree = "<group>"; };
+		FA15B0272493B42F00E7506B /* CartrackTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartrackTextField.swift; sourceTree = "<group>"; };
 		FA495D93249046AA005B9963 /* CartrackTechChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartrackTechChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA495D96249046AA005B9963 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA495D9A249046AA005B9963 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -131,7 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F035FF43D96C233CF7B7D3CF /* Pods_CartrackTechChallenge.framework in Frameworks */,
+				6FAA04A468CF727DCABF521B /* Pods_CartrackTechChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,31 +143,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46679C6F6EA344D09D00E315 /* Pods_CartrackTechChallengeTests.framework in Frameworks */,
+				2B88806E64956683C9A18D55 /* Pods_CartrackTechChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14E9E091103E47BFE6E12BB5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AF916B4E5630DB770BD15610 /* Pods_CartrackTechChallenge.framework */,
-				70F943DEA464BE72F3054344 /* Pods_CartrackTechChallengeTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		852107D5D2F0CFA64275E3D7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				70EB27ACE8DFB7CDCEA94CB5 /* Pods-CartrackTechChallenge.debug.xcconfig */,
-				11CE474BC04B9D7896342A26 /* Pods-CartrackTechChallenge.release.xcconfig */,
-				AEBAA4B5E2A1D1891E39D329 /* Pods-CartrackTechChallengeTests.debug.xcconfig */,
-				4C41277BD76B349D02DC9E8B /* Pods-CartrackTechChallengeTests.release.xcconfig */,
+				90CFB551A88D0A2EB9ED8526 /* Pods-CartrackTechChallenge.debug.xcconfig */,
+				4175E45F64B95EB6D429A1CD /* Pods-CartrackTechChallenge.release.xcconfig */,
+				D173618973B34951CE3EEE17 /* Pods-CartrackTechChallengeTests.debug.xcconfig */,
+				74818A06BA40F013D5F80F40 /* Pods-CartrackTechChallengeTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		99AB85809098FC68462E3DB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				967C589DB47CEB780F52B557 /* Pods_CartrackTechChallenge.framework */,
+				449AE8E7D7B15758A75CD56A /* Pods_CartrackTechChallengeTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FA11D7B6249289FD002AAD87 /* Custom */ = {
@@ -174,6 +178,15 @@
 			path = Custom;
 			sourceTree = "<group>";
 		};
+		FA15B0242493B3F500E7506B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FA15B0272493B42F00E7506B /* CartrackTextField.swift */,
+				FA15B0252493B42500E7506B /* CartrackButton.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		FA495D8A249046A9005B9963 = {
 			isa = PBXGroup;
 			children = (
@@ -181,7 +194,7 @@
 				FA495DAC249046AB005B9963 /* CartrackTechChallengeTests */,
 				FA495D94249046AA005B9963 /* Products */,
 				852107D5D2F0CFA64275E3D7 /* Pods */,
-				14E9E091103E47BFE6E12BB5 /* Frameworks */,
+				99AB85809098FC68462E3DB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -320,6 +333,7 @@
 		FA93657F2491117D00E51C0D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FA15B0242493B3F500E7506B /* UI */,
 				FA9365802491119800E51C0D /* CartrackConstants.swift */,
 			);
 			path = Utils;
@@ -351,11 +365,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA495DB2249046AB005B9963 /* Build configuration list for PBXNativeTarget "CartrackTechChallenge" */;
 			buildPhases = (
-				951801690F42E74E45C26BB9 /* [CP] Check Pods Manifest.lock */,
+				9F9DA9DD215A06BDE3A8F726 /* [CP] Check Pods Manifest.lock */,
 				FA495D8F249046AA005B9963 /* Sources */,
 				FA495D90249046AA005B9963 /* Frameworks */,
 				FA495D91249046AA005B9963 /* Resources */,
-				88B18BE864D1322831AA7EDE /* [CP] Embed Pods Frameworks */,
+				DD60FA20EEBEC961593C5EFB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -370,11 +384,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA495DB5249046AB005B9963 /* Build configuration list for PBXNativeTarget "CartrackTechChallengeTests" */;
 			buildPhases = (
-				95489DDEB1D01618114889D4 /* [CP] Check Pods Manifest.lock */,
+				A01800FF855099CE340C3D1B /* [CP] Check Pods Manifest.lock */,
 				FA495DA5249046AB005B9963 /* Sources */,
 				FA495DA6249046AB005B9963 /* Frameworks */,
 				FA495DA7249046AB005B9963 /* Resources */,
-				3B79D1E6EB377E00C79D662E /* [CP] Embed Pods Frameworks */,
+				42639D03AF20EAEA0CA8320D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -445,7 +459,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3B79D1E6EB377E00C79D662E /* [CP] Embed Pods Frameworks */ = {
+		42639D03AF20EAEA0CA8320D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -462,24 +476,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CartrackTechChallengeTests/Pods-CartrackTechChallengeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		88B18BE864D1322831AA7EDE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CartrackTechChallenge/Pods-CartrackTechChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CartrackTechChallenge/Pods-CartrackTechChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CartrackTechChallenge/Pods-CartrackTechChallenge-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		951801690F42E74E45C26BB9 /* [CP] Check Pods Manifest.lock */ = {
+		9F9DA9DD215A06BDE3A8F726 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -501,7 +498,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		95489DDEB1D01618114889D4 /* [CP] Check Pods Manifest.lock */ = {
+		A01800FF855099CE340C3D1B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -521,6 +518,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD60FA20EEBEC961593C5EFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CartrackTechChallenge/Pods-CartrackTechChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CartrackTechChallenge/Pods-CartrackTechChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CartrackTechChallenge/Pods-CartrackTechChallenge-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -548,6 +562,7 @@
 				FA495DC324904850005B9963 /* ILoginViewModel.swift in Sources */,
 				FA495DD924904A6E005B9963 /* UserDetailsViewController.swift in Sources */,
 				FA495D9B249046AA005B9963 /* LoginViewController.swift in Sources */,
+				FA15B0262493B42500E7506B /* CartrackButton.swift in Sources */,
 				FA936589249121CF00E51C0D /* Company.swift in Sources */,
 				FA495DCD249048BA005B9963 /* SceneDelegate.swift in Sources */,
 				FAAABFC82491445C00B82268 /* CompanyCell.swift in Sources */,
@@ -571,6 +586,7 @@
 				FA495DC52490485E005B9963 /* LoginViewModel.swift in Sources */,
 				FA93658C24912CD500E51C0D /* UserListCell.swift in Sources */,
 				FA93657924910D8500E51C0D /* User.swift in Sources */,
+				FA15B0282493B42F00E7506B /* CartrackTextField.swift in Sources */,
 				FA936587249121B500E51C0D /* Geo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -729,7 +745,7 @@
 		};
 		FA495DB3249046AB005B9963 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70EB27ACE8DFB7CDCEA94CB5 /* Pods-CartrackTechChallenge.debug.xcconfig */;
+			baseConfigurationReference = 90CFB551A88D0A2EB9ED8526 /* Pods-CartrackTechChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -748,7 +764,7 @@
 		};
 		FA495DB4249046AB005B9963 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11CE474BC04B9D7896342A26 /* Pods-CartrackTechChallenge.release.xcconfig */;
+			baseConfigurationReference = 4175E45F64B95EB6D429A1CD /* Pods-CartrackTechChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -767,7 +783,7 @@
 		};
 		FA495DB6249046AB005B9963 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AEBAA4B5E2A1D1891E39D329 /* Pods-CartrackTechChallengeTests.debug.xcconfig */;
+			baseConfigurationReference = D173618973B34951CE3EEE17 /* Pods-CartrackTechChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -790,7 +806,7 @@
 		};
 		FA495DB7249046AB005B9963 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C41277BD76B349D02DC9E8B /* Pods-CartrackTechChallengeTests.release.xcconfig */;
+			baseConfigurationReference = 74818A06BA40F013D5F80F40 /* Pods-CartrackTechChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

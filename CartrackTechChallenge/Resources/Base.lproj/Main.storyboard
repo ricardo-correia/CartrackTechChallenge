@@ -31,19 +31,19 @@
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" id="8Yb-k6-Nkz">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" id="8Yb-k6-Nkz" customClass="CartrackTextField" customModule="CartrackTechChallenge" customModuleProvider="target">
                                         <rect key="frame" x="64" y="441" width="244" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="Iaz-cw-pwd">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="Iaz-cw-pwd" customClass="CartrackTextField" customModule="CartrackTechChallenge" customModuleProvider="target">
                                         <rect key="frame" x="65" y="495" width="244" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="df3-gc-byE">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="df3-gc-byE" customClass="CartrackButton" customModule="CartrackTechChallenge" customModuleProvider="target">
                                         <rect key="frame" x="64" y="560" width="246" height="45"/>
                                         <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration" identifier="welcome_main_dtxbutton_01"/>
@@ -58,7 +58,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="buttonFilled" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="Bng-qz-ACn" kind="show" id="coP-bg-hs3"/>
+                                            <action selector="didPressLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IXd-PC-ocg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1h-PQ-6hE">
@@ -153,13 +153,13 @@
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" id="GBS-Fd-8iY">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" id="GBS-Fd-8iY" customClass="CartrackTextField" customModule="CartrackTechChallenge" customModuleProvider="target">
                                         <rect key="frame" x="64" y="415" width="244" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="OWl-2Z-XMv">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="OWl-2Z-XMv" customClass="CartrackTextField" customModule="CartrackTechChallenge" customModuleProvider="target">
                                         <rect key="frame" x="66" y="471" width="244" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -174,7 +174,7 @@
                                             </segue>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guU-Fn-pIA">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guU-Fn-pIA" customClass="CartrackButton" customModule="CartrackTechChallenge" customModuleProvider="target">
                                         <rect key="frame" x="60" y="563" width="254" height="45"/>
                                         <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration" identifier="welcome_main_dtxbutton_01"/>
@@ -283,7 +283,7 @@
         <!--User List View Controller-->
         <scene sceneID="4wO-QU-Th3">
             <objects>
-                <tableViewController id="Bng-qz-ACn" customClass="UserListViewController" customModule="CartrackTechChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="UserListViewController" id="Bng-qz-ACn" customClass="UserListViewController" customModule="CartrackTechChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zHg-Di-SkU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -349,7 +349,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GrP-AZ-psq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857.9710144927537" y="-226.33928571428569"/>
+            <point key="canvasLocation" x="2768.1159420289855" y="-226.33928571428569"/>
         </scene>
         <!--User Details View Controller-->
         <scene sceneID="1bw-dX-8yF">
@@ -540,7 +540,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0of-PH-rAA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2647.826086956522" y="-226.33928571428569"/>
+            <point key="canvasLocation" x="3557.971014492754" y="-226.33928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YKJ-MH-vPc">
@@ -559,6 +559,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJB-mL-UbD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="245" y="98"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xto-Ee-Jlo">
+            <objects>
+                <navigationController storyboardIdentifier="UserListNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="XI4-cU-WUZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IMP-a3-Wl6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Bng-qz-ACn" kind="relationship" relationship="rootViewController" id="Wmb-Pk-A8f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9c-f0-Usz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857.9710144927537" y="-226.33928571428569"/>
         </scene>
     </scenes>
     <resources>

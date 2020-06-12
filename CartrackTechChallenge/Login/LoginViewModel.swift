@@ -18,8 +18,8 @@ internal class LoginViewModel: ILoginViewModel {
         self.accountService = accountService
     }
     
-    internal func login(username: String, password: String) {
+    internal func login(username: String, password: String) -> Bool {
         //TODO: Verify if all data is properly filled
-        self.accountService?.login(username: username, password: password)
+        return self.accountService?.login(username: username, password: password) ?? false
     }
 }

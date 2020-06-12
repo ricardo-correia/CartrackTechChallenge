@@ -12,7 +12,7 @@ internal protocol PickerViewDelegate {
     func didSelectCountry(countryId: Int)
 }
 
-internal class RegisterViewController: BaseViewController, PickerViewDelegate {
+internal class RegisterViewController: BaseViewController, PickerViewDelegate, UITextFieldDelegate {
     
     // MARK: - IBOutlets
     @IBOutlet weak var image: UIImageView!
@@ -33,6 +33,13 @@ internal class RegisterViewController: BaseViewController, PickerViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    func setupButton(to state: Bool) {
+        // Checks for the ok button's current state and updates it accordingly
+        registerButton.alpha = state ? 1.0 : 0.25
+        registerButton.isEnabled = state
+    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let viewController = segue.destination as? CountryPickerViewController else {

@@ -9,5 +9,5 @@
 import Foundation
 
 internal protocol ILoginViewModel {
-    func login(username: String, password: String)
+    func login(username: String, password: String) -> Bool
 }
