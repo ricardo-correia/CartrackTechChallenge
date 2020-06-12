@@ -24,15 +24,15 @@ internal class AccountService: IAccountService {
         self.countryRepository = countryRepository
     }
     
-    internal func login(username: String, password: String) -> Bool? {
+    internal func login(username: String, password: String) -> Observable<Bool>? {
         return self.accountRepository?.login(username: username, password: password)
     }
     
-    internal func register(username: String, password: String, countryId: Int) -> Bool? {
+    internal func register(username: String, password: String, countryId: Int) -> Observable<Bool>? {
         return self.accountRepository?.register(username: username, password: password, countryId: countryId)
     }
     
-    func getCountryList() -> Observable<[Country]> {
-        return (self.countryRepository?.getCountryList())!
+    func getCountryList() -> Observable<[Country]>? {
+        return self.countryRepository?.getCountryList()
     }
 }

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 internal protocol PickerViewDelegate {
     func didSelectCountry(country: Country?)
@@ -27,6 +29,7 @@ internal class RegisterViewController: BaseViewController, PickerViewDelegate, U
     
     // MARK: - Private Attributes
     private var selectedCountryId: Int?
+    private let disposeBag = DisposeBag()
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -39,6 +42,20 @@ internal class RegisterViewController: BaseViewController, PickerViewDelegate, U
                
         password.delegate = self
         password.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        
+        self.bindObservableVariables()
+    }
+    
+    private func bindObservableVariables() {
+        self.registerViewModel?.registrationSuccess.asObservable()
+            .bind { registrationSuccess in
+                guard let success = registrationSuccess else { return }
+                if success {
+                    self.presentSuccessAlertController()
+                } else {
+                    self.presentErrorAlertController()
+                }
+            }.disposed(by: disposeBag)
     }
     
     func setupButton(to state: Bool) {
@@ -66,13 +83,7 @@ internal class RegisterViewController: BaseViewController, PickerViewDelegate, U
     }
     
     @IBAction func didPressRegisterButton(_ sender: Any) {
-        guard let viewModel = self.registerViewModel else { return }
-    
-        if viewModel.register(username: username.text, password: password.text, countryId: selectedCountryId) {
-            self.presentSuccessAlertController()
-        } else {
-            self.presentErrorAlertController()
-        }
+        self.registerViewModel?.register(username: username.text, password: password.text, countryId: selectedCountryId)
     }
     
     private func validateData() {

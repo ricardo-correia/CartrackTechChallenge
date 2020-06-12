@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 internal protocol IAccountService {
-    func login(username: String, password: String) -> Bool?
-    func register(username: String, password: String, countryId: Int) -> Bool?
-    func getCountryList() -> Observable<[Country]>
+    func login(username: String, password: String) -> Observable<Bool>?
+    func register(username: String, password: String, countryId: Int) -> Observable<Bool>?
+    func getCountryList() -> Observable<[Country]>?
 }

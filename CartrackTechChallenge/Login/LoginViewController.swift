@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class LoginViewController: BaseViewController, UITextFieldDelegate {
 
@@ -21,6 +23,9 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     // MARK: - Internal Attributes
     internal var loginViewModel: ILoginViewModel?
     
+    // MARK: - Private Attributes
+    private let disposeBag = DisposeBag()
+    
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +37,20 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         
         password.delegate = self
         password.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        
+        self.bindObservableVariables()
+    }
+    
+    private func bindObservableVariables() {
+        self.loginViewModel?.loginSuccess.asObservable()
+            .bind { loginSuccess in
+                guard let success = loginSuccess else { return }
+                if success {
+                    self.launchUserListViewController()
+                } else {
+                    self.presentAlertController()
+                }
+            }.disposed(by: disposeBag)
     }
     
     func setupButton(to state: Bool) {
@@ -49,11 +68,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     }
     
     @IBAction func didPressLoginButton(_ sender: Any) {
-        if self.loginViewModel?.login(username: username.text ?? "", password: password.text ?? "") == true {
-            self.launchUserListViewController()
-        } else {
-            self.presentAlertController()
-        }
+        self.loginViewModel?.login(username: username.text ?? "", password: password.text ?? "")
     }
     
     private func launchUserListViewController() {

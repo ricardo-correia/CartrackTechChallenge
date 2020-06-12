@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 import SQLite3
 
 internal class AccountRepository: BaseSQLiteRepository, IAccountRepository {
@@ -29,16 +30,30 @@ internal class AccountRepository: BaseSQLiteRepository, IAccountRepository {
         self.createAccountTable()
     }
     
-    internal func login(username: String, password: String) -> Bool? {
-        return self.validateLoginInfo(username: username, password: password)
+    internal func login(username: String, password: String) -> Observable<Bool> {
+        return Observable.create { observer in
+            let success = self.validateLoginInfo(username: username, password: password)
+            observer.onNext(success)
+            observer.onCompleted()
+           
+            return Disposables.create {}
+        }
     }
     
-    internal func register(username: String, password: String, countryId: Int) -> Bool? {
-        if usernameExists(username: username) {
-            return false
+    internal func register(username: String, password: String, countryId: Int) -> Observable<Bool> {
+        return Observable.create { observer in
+            var success: Bool?
+            if self.usernameExists(username: username) {
+                success = false
+            } else {
+                success = self.insert(username: username as NSString, password: password as NSString, countryId: Int32(countryId))
+            }
+           
+            observer.onNext(success ?? false)
+            observer.onCompleted()
+           
+            return Disposables.create {}
         }
-        
-        return self.insert(username: username as NSString, password: password as NSString, countryId: Int32(countryId))
     }
     
     private func createAccountTable() {

@@ -7,9 +7,14 @@
 //
 
 import Foundation
+import RxCocoa
 import RxSwift
 
 internal protocol IRegisterViewModel {
+    
+    // MARK: - Observable Variables
+    var registrationSuccess: BehaviorRelay<Bool?> { get }
+    
     // MARK: - Functions
-    func register(username: String?, password: String?, countryId: Int?) -> Bool
+    func register(username: String?, password: String?, countryId: Int?)
 }

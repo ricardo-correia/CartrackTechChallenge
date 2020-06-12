@@ -10,6 +10,6 @@ import Foundation
 import RxSwift
 
 internal protocol IAccountRepository {
-    func login(username: String, password: String) -> Bool?
-    func register(username: String, password: String, countryId: Int) -> Bool?
+    func login(username: String, password: String) -> Observable<Bool>
+    func register(username: String, password: String, countryId: Int) -> Observable<Bool>
 }

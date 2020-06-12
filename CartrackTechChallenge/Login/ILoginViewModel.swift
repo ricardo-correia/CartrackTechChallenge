@@ -7,7 +7,12 @@
 //
 
 import Foundation
+import RxCocoa
 
 internal protocol ILoginViewModel {
-    func login(username: String, password: String) -> Bool
+    // MARK: - Observable Variables
+    var loginSuccess: BehaviorRelay<Bool?> { get }
+    
+    // MARK: Functions
+    func login(username: String, password: String)
 }

@@ -29,9 +29,6 @@ internal class CountryPickerViewModel: ICountryPickerViewModel {
         getCountryList?.subscribe(
             onNext: { data in
                 self.countryList.accept(data)
-            },
-            onError: { error in
-                //TODO: Error Handling
             }
         ).disposed(by: self.disposeBag)
     }

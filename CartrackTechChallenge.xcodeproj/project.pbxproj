@@ -11,6 +11,7 @@
 		6FAA04A468CF727DCABF521B /* Pods_CartrackTechChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967C589DB47CEB780F52B557 /* Pods_CartrackTechChallenge.framework */; };
 		FA0E54DD2493D44B001910D5 /* ICountryPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E54DC2493D44B001910D5 /* ICountryPickerViewModel.swift */; };
 		FA0E54DF2493D467001910D5 /* CountryPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E54DE2493D467001910D5 /* CountryPickerViewModel.swift */; };
+		FA0E54E124944025001910D5 /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E54E024944025001910D5 /* DataTypes.swift */; };
 		FA11D7AF2492516F002AAD87 /* BaseSQLiteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11D7AE2492516F002AAD87 /* BaseSQLiteRepository.swift */; };
 		FA11D7B124926478002AAD87 /* ICountryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11D7B024926478002AAD87 /* ICountryRepository.swift */; };
 		FA11D7B324926488002AAD87 /* CountryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11D7B224926488002AAD87 /* CountryRepository.swift */; };
@@ -80,6 +81,7 @@
 		D173618973B34951CE3EEE17 /* Pods-CartrackTechChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartrackTechChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-CartrackTechChallengeTests/Pods-CartrackTechChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA0E54DC2493D44B001910D5 /* ICountryPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICountryPickerViewModel.swift; sourceTree = "<group>"; };
 		FA0E54DE2493D467001910D5 /* CountryPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerViewModel.swift; sourceTree = "<group>"; };
+		FA0E54E024944025001910D5 /* DataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypes.swift; sourceTree = "<group>"; };
 		FA11D7AE2492516F002AAD87 /* BaseSQLiteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSQLiteRepository.swift; sourceTree = "<group>"; };
 		FA11D7B024926478002AAD87 /* ICountryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICountryRepository.swift; sourceTree = "<group>"; };
 		FA11D7B224926488002AAD87 /* CountryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRepository.swift; sourceTree = "<group>"; };
@@ -177,7 +179,6 @@
 		FA11D7B6249289FD002AAD87 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				FA11D7B924928AFB002AAD87 /* CountryPickerViewController.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -282,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				FA93657C249110E300E51C0D /* Data */,
+				FA0E54E024944025001910D5 /* DataTypes.swift */,
 				FA11D7AE2492516F002AAD87 /* BaseSQLiteRepository.swift */,
 				FA93657D249110FB00E51C0D /* IUserRepository.swift */,
 				FA93657A249110D900E51C0D /* UserRepository.swift */,
@@ -587,6 +589,7 @@
 				FAAABFD22491AF3C00B82268 /* AccountRepository.swift in Sources */,
 				FA11D7AF2492516F002AAD87 /* BaseSQLiteRepository.swift in Sources */,
 				FA495DD724904A05005B9963 /* UserListViewModel.swift in Sources */,
+				FA0E54E124944025001910D5 /* DataTypes.swift in Sources */,
 				FA495DDB24904A84005B9963 /* UserDetailsViewModel.swift in Sources */,
 				FA495DD1249048F0005B9963 /* UserService.swift in Sources */,
 				FA11D7B124926478002AAD87 /* ICountryRepository.swift in Sources */,
