@@ -34,17 +34,35 @@ internal class RegisterViewController: BaseViewController, PickerViewDelegate, U
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.setupButton(to: false)
         
+        self.setupButton(to: false)
+        self.configureTextFields()
+        self.configureCountryButton()
+        self.bindObservableVariables()
+    }
+    
+    private func configureTextFields() {
         username.delegate = self
         username.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-               
+              
         password.delegate = self
         password.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         password.isSecureTextEntry = true
+    }
+    
+    private func configureCountryButton() {
+        countryButton.backgroundColor = .clear
+        countryButton.layer.cornerRadius = 5
+        countryButton.layer.borderWidth = 0.5
+        countryButton.layer.borderColor = UIColor.black.cgColor
         
-        self.bindObservableVariables()
+        countryButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+        countryButton.semanticContentAttribute = UIApplication.shared
+        .userInterfaceLayoutDirection == .leftToRight ? .forceLeftToRight : .forceRightToLeft
+        
+        if let image = UIImage(named: "dropdown.png") {
+            countryButton.setImage(image, for: .normal)
+        }
     }
     
     private func bindObservableVariables() {
@@ -78,7 +96,7 @@ internal class RegisterViewController: BaseViewController, PickerViewDelegate, U
     }
     
     func didSelectCountry(country: Country?) {
-        self.countryButton.setTitle(country?.name, for: .normal)
+        self.countryButton.setTitle("  \(country?.name ?? "")", for: .normal)
         self.selectedCountryId = country?.id
         self.validateData()
     }

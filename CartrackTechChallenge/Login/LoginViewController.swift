@@ -29,17 +29,19 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.setupButton(to: false)
-        
+
+        self.setupButton(to: false)        
+        self.configureTextFields()
+        self.bindObservableVariables()
+    }
+    
+    private func configureTextFields() {
         username.delegate = self
         username.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         
         password.delegate = self
         password.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         password.isSecureTextEntry = true
-        
-        self.bindObservableVariables()
     }
     
     private func bindObservableVariables() {
