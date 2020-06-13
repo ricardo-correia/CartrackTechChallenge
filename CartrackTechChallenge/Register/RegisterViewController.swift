@@ -42,6 +42,7 @@ internal class RegisterViewController: BaseViewController, PickerViewDelegate, U
                
         password.delegate = self
         password.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        password.isSecureTextEntry = true
         
         self.bindObservableVariables()
     }

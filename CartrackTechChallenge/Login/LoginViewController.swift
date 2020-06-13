@@ -37,6 +37,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         
         password.delegate = self
         password.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        password.isSecureTextEntry = true
         
         self.bindObservableVariables()
     }

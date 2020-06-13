@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RXE-Bd-exa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,32 +21,57 @@
                                 <rect key="frame" x="20" y="108" width="374" height="734"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="Ypz-7H-3Qv">
-                                        <rect key="frame" x="8" y="154" width="358" height="160"/>
+                                        <rect key="frame" x="8" y="30" width="358" height="160"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="160" id="vZV-Fu-ukZ"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vth-DD-wOh">
+                                        <rect key="frame" x="40" y="170" width="294" height="30.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="welcome_main_uilabel_01"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30.5" id="8c4-aB-lMx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get started by entering your personal ID, or register yourself as a new user." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBQ-hc-EzG">
-                                        <rect key="frame" x="40" y="347" width="294" height="74"/>
+                                        <rect key="frame" x="40" y="210.5" width="294" height="100"/>
                                         <accessibility key="accessibilityConfiguration" identifier="welcome_main_uilabel_02"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="YNn-PA-p4a"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" id="8Yb-k6-Nkz" customClass="CartrackTextField" customModule="CartrackTechChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="64" y="441" width="244" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iK9-Si-RJ7">
+                                        <rect key="frame" x="50" y="318" width="274" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="V6H-bp-Up6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="Iaz-cw-pwd" customClass="CartrackTextField" customModule="CartrackTechChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="65" y="495" width="244" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8hH-zM-y5Q">
+                                        <rect key="frame" x="50" y="378" width="274" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Gbn-on-Xgu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1h-PQ-6hE">
+                                        <rect key="frame" x="65" y="513" width="244" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Register"/>
+                                        <connections>
+                                            <segue destination="9BU-jV-f7n" kind="show" id="I8n-eU-VGh"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="df3-gc-byE" customClass="CartrackButton" customModule="CartrackTechChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="64" y="560" width="246" height="45"/>
+                                        <rect key="frame" x="50" y="448" width="274" height="45"/>
                                         <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration" identifier="welcome_main_dtxbutton_01"/>
                                         <constraints>
@@ -62,40 +88,30 @@
                                             <action selector="didPressLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IXd-PC-ocg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1h-PQ-6hE">
-                                        <rect key="frame" x="65" y="625" width="244" height="38"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <state key="normal" title="Register"/>
-                                        <connections>
-                                            <segue destination="9BU-jV-f7n" kind="show" id="I8n-eU-VGh"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vth-DD-wOh">
-                                        <rect key="frame" x="40" y="294" width="294" height="30.5"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="welcome_main_uilabel_01"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8hH-zM-y5Q" secondAttribute="trailing" constant="50" id="596-8P-U26"/>
                                     <constraint firstItem="vth-DD-wOh" firstAttribute="top" secondItem="Ypz-7H-3Qv" secondAttribute="bottom" constant="-20" id="6C3-ic-JTS"/>
-                                    <constraint firstItem="EBQ-hc-EzG" firstAttribute="top" secondItem="vth-DD-wOh" secondAttribute="bottom" constant="22.5" id="HXa-QU-o0c"/>
+                                    <constraint firstItem="EBQ-hc-EzG" firstAttribute="top" secondItem="vth-DD-wOh" secondAttribute="bottom" constant="10" id="7g7-jd-cz4"/>
                                     <constraint firstItem="Ypz-7H-3Qv" firstAttribute="leading" secondItem="oo1-Xq-gUs" secondAttribute="leading" constant="8" id="Hiw-Vf-okn"/>
-                                    <constraint firstItem="df3-gc-byE" firstAttribute="leading" secondItem="oo1-Xq-gUs" secondAttribute="leading" constant="64" id="LkY-nZ-Mq5"/>
+                                    <constraint firstItem="iK9-Si-RJ7" firstAttribute="leading" secondItem="oo1-Xq-gUs" secondAttribute="leading" constant="50" id="Jlq-T6-FdC"/>
+                                    <constraint firstItem="df3-gc-byE" firstAttribute="leading" secondItem="oo1-Xq-gUs" secondAttribute="leading" constant="50" id="LkY-nZ-Mq5"/>
                                     <constraint firstAttribute="trailing" secondItem="EBQ-hc-EzG" secondAttribute="trailing" constant="40" id="OTh-Kv-lSX"/>
-                                    <constraint firstAttribute="trailing" secondItem="df3-gc-byE" secondAttribute="trailing" constant="64" id="WWY-pL-t8o"/>
+                                    <constraint firstItem="df3-gc-byE" firstAttribute="top" secondItem="8hH-zM-y5Q" secondAttribute="bottom" constant="30" id="QPj-oH-L2s"/>
+                                    <constraint firstAttribute="trailing" secondItem="df3-gc-byE" secondAttribute="trailing" constant="50" id="WWY-pL-t8o"/>
                                     <constraint firstItem="z1h-PQ-6hE" firstAttribute="top" secondItem="df3-gc-byE" secondAttribute="bottom" constant="20" id="XDw-aj-wah"/>
-                                    <constraint firstItem="Ypz-7H-3Qv" firstAttribute="top" secondItem="oo1-Xq-gUs" secondAttribute="top" constant="154" id="ZIS-Q8-Fpa"/>
+                                    <constraint firstItem="Ypz-7H-3Qv" firstAttribute="top" secondItem="oo1-Xq-gUs" secondAttribute="top" constant="30" id="ZIS-Q8-Fpa"/>
+                                    <constraint firstAttribute="trailing" secondItem="iK9-Si-RJ7" secondAttribute="trailing" constant="50" id="acG-RL-Ibe"/>
+                                    <constraint firstItem="iK9-Si-RJ7" firstAttribute="top" secondItem="EBQ-hc-EzG" secondAttribute="bottom" constant="7.5" id="c6i-Fn-vDq"/>
                                     <constraint firstItem="z1h-PQ-6hE" firstAttribute="leading" secondItem="oo1-Xq-gUs" secondAttribute="leading" constant="65" id="cLg-QO-PYi"/>
+                                    <constraint firstItem="8hH-zM-y5Q" firstAttribute="leading" secondItem="oo1-Xq-gUs" secondAttribute="leading" constant="50" id="cz9-i9-MV6"/>
                                     <constraint firstAttribute="trailing" secondItem="vth-DD-wOh" secondAttribute="trailing" constant="40" id="hv7-fz-HsQ"/>
                                     <constraint firstAttribute="trailing" secondItem="z1h-PQ-6hE" secondAttribute="trailing" constant="65" id="kIs-El-b8w"/>
                                     <constraint firstItem="vth-DD-wOh" firstAttribute="leading" secondItem="oo1-Xq-gUs" secondAttribute="leading" constant="40" id="sdS-8d-cKR"/>
                                     <constraint firstAttribute="trailing" secondItem="Ypz-7H-3Qv" secondAttribute="trailing" constant="8" id="t2D-h4-epi"/>
                                     <constraint firstItem="EBQ-hc-EzG" firstAttribute="leading" secondItem="oo1-Xq-gUs" secondAttribute="leading" constant="40" id="wFi-iu-b5w"/>
-                                    <constraint firstItem="8Yb-k6-Nkz" firstAttribute="top" secondItem="EBQ-hc-EzG" secondAttribute="bottom" constant="20" id="xIB-H8-MWR"/>
-                                    <constraint firstItem="df3-gc-byE" firstAttribute="top" secondItem="Iaz-cw-pwd" secondAttribute="bottom" constant="31" id="xeh-s1-wm1"/>
+                                    <constraint firstItem="8hH-zM-y5Q" firstAttribute="top" secondItem="iK9-Si-RJ7" secondAttribute="bottom" constant="20" id="zqV-Yd-suV"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -114,9 +130,9 @@
                         <outlet property="loginButton" destination="df3-gc-byE" id="nbh-PB-nCy"/>
                         <outlet property="loginDescription" destination="EBQ-hc-EzG" id="qxL-Ll-CUU"/>
                         <outlet property="loginTitle" destination="vth-DD-wOh" id="UwJ-QD-qfa"/>
-                        <outlet property="password" destination="Iaz-cw-pwd" id="bYr-By-haM"/>
+                        <outlet property="password" destination="8hH-zM-y5Q" id="sJe-VO-fSV"/>
                         <outlet property="registerButton" destination="z1h-PQ-6hE" id="l3t-g2-hYG"/>
-                        <outlet property="username" destination="8Yb-k6-Nkz" id="F3j-Ve-sKH"/>
+                        <outlet property="username" destination="iK9-Si-RJ7" id="S6Y-K7-hJc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -135,39 +151,57 @@
                                 <rect key="frame" x="20" y="108" width="374" height="734"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="Byq-Vt-7VA">
-                                        <rect key="frame" x="8" y="154" width="358" height="160"/>
+                                        <rect key="frame" x="8" y="30" width="358" height="160"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="160" id="Nsb-4k-ryd"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Registration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sby-tF-a4q">
-                                        <rect key="frame" x="40" y="294" width="294" height="31"/>
+                                        <rect key="frame" x="40" y="170" width="294" height="31"/>
                                         <accessibility key="accessibilityConfiguration" identifier="welcome_main_uilabel_01"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Create a new account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deL-Pg-FXD">
-                                        <rect key="frame" x="40" y="347" width="294" height="48"/>
+                                        <rect key="frame" x="40" y="223" width="294" height="25"/>
                                         <accessibility key="accessibilityConfiguration" identifier="welcome_main_uilabel_02"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" id="GBS-Fd-8iY" customClass="CartrackTextField" customModule="CartrackTechChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="64" y="415" width="244" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UaX-DW-Isy">
+                                        <rect key="frame" x="50" y="263" width="274" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Dqk-jH-zhV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="OWl-2Z-XMv" customClass="CartrackTextField" customModule="CartrackTechChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="64" y="471" width="244" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AeB-Jq-6Q6">
+                                        <rect key="frame" x="50" y="323" width="274" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="TJ3-G1-4i3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0s-QQ-8hH">
+                                        <rect key="frame" x="50" y="383" width="274" height="40"/>
+                                        <color key="backgroundColor" name="cartrackButtonShadow"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="yGD-6Q-0FN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name=".SFNSText" family=".SF NS Text" pointSize="18"/>
+                                        <state key="normal" title="Country Selection"/>
+                                        <connections>
+                                            <segue destination="ENZ-Ji-y8n" kind="popoverPresentation" popoverAnchorView="g0s-QQ-8hH" id="JFP-g3-oy9">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guU-Fn-pIA" customClass="CartrackButton" customModule="CartrackTechChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="64" y="577" width="244" height="45"/>
+                                        <rect key="frame" x="50" y="443" width="274" height="45"/>
                                         <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration" identifier="welcome_main_dtxbutton_01"/>
                                         <constraints>
@@ -184,41 +218,35 @@
                                             <action selector="didPressRegisterButton:" destination="9BU-jV-f7n" eventType="touchUpInside" id="kfA-Fy-1ov"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0s-QQ-8hH">
-                                        <rect key="frame" x="64" y="525" width="244" height="32"/>
-                                        <color key="backgroundColor" name="cartrackButtonShadow"/>
-                                        <fontDescription key="fontDescription" name=".SFNSText" family=".SF NS Text" pointSize="18"/>
-                                        <state key="normal" title="Country Selection"/>
-                                        <connections>
-                                            <segue destination="ENZ-Ji-y8n" kind="popoverPresentation" popoverAnchorView="g0s-QQ-8hH" id="JFP-g3-oy9">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="AeB-Jq-6Q6" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="50" id="0zL-Hg-sXq"/>
                                     <constraint firstItem="deL-Pg-FXD" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="40" id="2dT-6f-Hh2"/>
-                                    <constraint firstItem="guU-Fn-pIA" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="64" id="8cM-Ux-4Yf"/>
-                                    <constraint firstAttribute="trailing" secondItem="guU-Fn-pIA" secondAttribute="trailing" constant="66" id="DMs-tb-ccR"/>
-                                    <constraint firstItem="Byq-Vt-7VA" firstAttribute="top" secondItem="3b1-RT-rkg" secondAttribute="top" constant="154" id="EhC-CG-VVW"/>
+                                    <constraint firstItem="guU-Fn-pIA" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="50" id="8cM-Ux-4Yf"/>
+                                    <constraint firstItem="AeB-Jq-6Q6" firstAttribute="top" secondItem="UaX-DW-Isy" secondAttribute="bottom" constant="20" id="BqY-pq-vMo"/>
+                                    <constraint firstAttribute="trailing" secondItem="g0s-QQ-8hH" secondAttribute="trailing" constant="50" id="BuI-Z1-5Oe"/>
+                                    <constraint firstAttribute="trailing" secondItem="guU-Fn-pIA" secondAttribute="trailing" constant="50" id="DMs-tb-ccR"/>
+                                    <constraint firstItem="Byq-Vt-7VA" firstAttribute="top" secondItem="3b1-RT-rkg" secondAttribute="top" constant="30" id="EhC-CG-VVW"/>
+                                    <constraint firstItem="g0s-QQ-8hH" firstAttribute="top" secondItem="AeB-Jq-6Q6" secondAttribute="bottom" constant="20" id="LtI-So-PrM"/>
                                     <constraint firstItem="guU-Fn-pIA" firstAttribute="top" secondItem="g0s-QQ-8hH" secondAttribute="bottom" constant="20" id="P5u-Gh-gLN"/>
                                     <constraint firstAttribute="trailing" secondItem="deL-Pg-FXD" secondAttribute="trailing" constant="40" id="PNS-yz-Koy"/>
                                     <constraint firstItem="deL-Pg-FXD" firstAttribute="top" secondItem="Sby-tF-a4q" secondAttribute="bottom" constant="22" id="SX7-J3-89b"/>
-                                    <constraint firstItem="g0s-QQ-8hH" firstAttribute="top" secondItem="OWl-2Z-XMv" secondAttribute="bottom" constant="20" id="SgS-hF-Ux0"/>
                                     <constraint firstAttribute="trailing" secondItem="Sby-tF-a4q" secondAttribute="trailing" constant="40" id="Xfh-yb-cDx"/>
                                     <constraint firstItem="Byq-Vt-7VA" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="8" id="Zn3-gl-Tln"/>
                                     <constraint firstItem="Sby-tF-a4q" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="40" id="a5b-oe-ea2"/>
-                                    <constraint firstItem="g0s-QQ-8hH" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="64" id="bgW-Oe-yoM"/>
-                                    <constraint firstItem="GBS-Fd-8iY" firstAttribute="top" secondItem="deL-Pg-FXD" secondAttribute="bottom" constant="20" id="hAX-VG-WGO"/>
+                                    <constraint firstItem="UaX-DW-Isy" firstAttribute="top" secondItem="deL-Pg-FXD" secondAttribute="bottom" constant="15" id="ao3-3W-bXv"/>
+                                    <constraint firstItem="g0s-QQ-8hH" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="50" id="bgW-Oe-yoM"/>
+                                    <constraint firstAttribute="trailing" secondItem="UaX-DW-Isy" secondAttribute="trailing" constant="50" id="fYG-V7-qjW"/>
+                                    <constraint firstItem="UaX-DW-Isy" firstAttribute="leading" secondItem="3b1-RT-rkg" secondAttribute="leading" constant="50" id="gls-ME-gYE"/>
                                     <constraint firstAttribute="trailing" secondItem="Byq-Vt-7VA" secondAttribute="trailing" constant="8" id="j11-5k-tKO"/>
                                     <constraint firstItem="Sby-tF-a4q" firstAttribute="top" secondItem="Byq-Vt-7VA" secondAttribute="bottom" constant="-20" id="lZP-ic-6Mk"/>
+                                    <constraint firstAttribute="trailing" secondItem="AeB-Jq-6Q6" secondAttribute="trailing" constant="50" id="qfE-zv-QHv"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="smX-Oe-d5q" firstAttribute="trailing" secondItem="g0s-QQ-8hH" secondAttribute="trailing" constant="86" id="1ku-7v-PuR"/>
                             <constraint firstItem="3b1-RT-rkg" firstAttribute="leading" secondItem="smX-Oe-d5q" secondAttribute="leading" constant="20" id="Fzd-XX-ew3"/>
                             <constraint firstItem="3b1-RT-rkg" firstAttribute="trailing" secondItem="smX-Oe-d5q" secondAttribute="trailing" constant="-20" id="PA4-4q-dIw"/>
                             <constraint firstItem="smX-Oe-d5q" firstAttribute="bottom" secondItem="3b1-RT-rkg" secondAttribute="bottom" constant="20" id="glZ-mW-37W"/>
@@ -230,11 +258,11 @@
                     <connections>
                         <outlet property="countryButton" destination="g0s-QQ-8hH" id="yo5-GK-vPr"/>
                         <outlet property="frameView" destination="3b1-RT-rkg" id="NSV-1Z-PHb"/>
-                        <outlet property="password" destination="OWl-2Z-XMv" id="BJu-iV-J3n"/>
+                        <outlet property="password" destination="AeB-Jq-6Q6" id="066-f4-7k8"/>
                         <outlet property="registerButton" destination="guU-Fn-pIA" id="pQa-JQ-bb1"/>
                         <outlet property="registerDescription" destination="deL-Pg-FXD" id="KEv-aY-VvN"/>
                         <outlet property="registerTitle" destination="Sby-tF-a4q" id="50f-Q5-Gkw"/>
-                        <outlet property="username" destination="GBS-Fd-8iY" id="bGL-qn-4uC"/>
+                        <outlet property="username" destination="UaX-DW-Isy" id="O9e-vG-hdK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="85V-YI-zTK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
