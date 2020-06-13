@@ -291,6 +291,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="vb3-S9-BWu">
+                            <rect key="frame" x="0.0" y="256" width="414" height="83"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Vrb-MU-fd3">
+                                    <rect key="frame" x="188.5" y="23" width="37" height="37"/>
+                                </activityIndicatorView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="Vrb-MU-fd3" firstAttribute="centerX" secondItem="vb3-S9-BWu" secondAttribute="centerX" id="1Xn-6w-XRX"/>
+                                <constraint firstItem="Vrb-MU-fd3" firstAttribute="centerY" secondItem="vb3-S9-BWu" secondAttribute="centerY" id="fw8-sF-EZR"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserListCell" rowHeight="200" id="yRD-yO-H7x" customClass="UserListCell" customModule="CartrackTechChallenge" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="200"/>
@@ -352,7 +366,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GrP-AZ-psq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2768.1159420289855" y="-226.33928571428569"/>
+            <point key="canvasLocation" x="2766.666666666667" y="-226.33928571428569"/>
         </scene>
         <!--User Details View Controller-->
         <scene sceneID="1bw-dX-8yF">

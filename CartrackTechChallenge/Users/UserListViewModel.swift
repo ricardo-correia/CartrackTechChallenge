@@ -30,7 +30,9 @@ internal class UserListViewModel: IUserListViewModel {
         let getUserList = self.userService?.getUserList()
         getUserList?.subscribe(
             onNext: { data in
-                self.userList.accept(data)
+                var users = self.userList.value
+                users += data
+                self.userList.accept(users)
             },
             onError: { error in
                 //TODO: Error Handling

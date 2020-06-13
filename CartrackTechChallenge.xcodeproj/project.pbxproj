@@ -23,7 +23,6 @@
 		FA495D9B249046AA005B9963 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495D9A249046AA005B9963 /* LoginViewController.swift */; };
 		FA495D9E249046AA005B9963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA495D9C249046AA005B9963 /* Main.storyboard */; };
 		FA495DA0249046AB005B9963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA495D9F249046AB005B9963 /* Assets.xcassets */; };
-		FA495DA3249046AB005B9963 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA495DA1249046AB005B9963 /* LaunchScreen.storyboard */; };
 		FA495DAE249046AB005B9963 /* CartrackTechChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DAD249046AB005B9963 /* CartrackTechChallengeTests.swift */; };
 		FA495DC324904850005B9963 /* ILoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DC224904850005B9963 /* ILoginViewModel.swift */; };
 		FA495DC52490485E005B9963 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DC42490485E005B9963 /* LoginViewModel.swift */; };
@@ -52,6 +51,7 @@
 		FA936587249121B500E51C0D /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA936586249121B500E51C0D /* Geo.swift */; };
 		FA936589249121CF00E51C0D /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA936588249121CF00E51C0D /* Company.swift */; };
 		FA93658C24912CD500E51C0D /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93658B24912CD500E51C0D /* UserListCell.swift */; };
+		FA9F575A2494D75700676FAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9F57592494D75700676FAE /* LaunchScreen.storyboard */; };
 		FAAABFC624913E8100B82268 /* UserDetailsMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAABFC524913E8100B82268 /* UserDetailsMainCell.swift */; };
 		FAAABFC82491445C00B82268 /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAABFC72491445C00B82268 /* CompanyCell.swift */; };
 		FAAABFCA2491447500B82268 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAABFC92491447500B82268 /* AddressCell.swift */; };
@@ -94,7 +94,6 @@
 		FA495D9A249046AA005B9963 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FA495D9D249046AA005B9963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA495D9F249046AB005B9963 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FA495DA2249046AB005B9963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA495DA4249046AB005B9963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA495DA9249046AB005B9963 /* CartrackTechChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CartrackTechChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA495DAD249046AB005B9963 /* CartrackTechChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartrackTechChallengeTests.swift; sourceTree = "<group>"; };
@@ -126,6 +125,7 @@
 		FA936586249121B500E51C0D /* Geo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geo.swift; sourceTree = "<group>"; };
 		FA936588249121CF00E51C0D /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		FA93658B24912CD500E51C0D /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
+		FA9F57592494D75700676FAE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAAABFC524913E8100B82268 /* UserDetailsMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsMainCell.swift; sourceTree = "<group>"; };
 		FAAABFC72491445C00B82268 /* CompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCell.swift; sourceTree = "<group>"; };
 		FAAABFC92491447500B82268 /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
@@ -310,7 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				FA495D9C249046AA005B9963 /* Main.storyboard */,
-				FA495DA1249046AB005B9963 /* LaunchScreen.storyboard */,
+				FA9F57592494D75700676FAE /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -452,7 +452,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA495DA3249046AB005B9963 /* LaunchScreen.storyboard in Resources */,
+				FA9F575A2494D75700676FAE /* LaunchScreen.storyboard in Resources */,
 				FA495DA0249046AB005B9963 /* Assets.xcassets in Resources */,
 				FA495D9E249046AA005B9963 /* Main.storyboard in Resources */,
 			);
@@ -628,14 +628,6 @@
 				FA495D9D249046AA005B9963 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FA495DA1249046AB005B9963 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA495DA2249046AB005B9963 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

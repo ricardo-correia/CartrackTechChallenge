@@ -13,6 +13,9 @@ import RxCocoa
 
 internal class UserListViewController: UITableViewController {
     
+    // MARK: - Private Constants
+    private let MAX_USERS = 100
+    
     // MARK: - Internal Attributes
     internal var userListViewModel: IUserListViewModel?
     
@@ -32,6 +35,13 @@ internal class UserListViewController: UITableViewController {
         spinner?.hidesWhenStopped = true
         spinner?.startAnimating()
         self.tableView.backgroundView = spinner
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Account", style: .plain, target: self,
+                                                                 action: #selector(accountTapped))
+    }
+    
+    @objc func accountTapped() {
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -46,10 +56,18 @@ internal class UserListViewController: UITableViewController {
     private func bindObservableVariables() {
         self.userListViewModel?.userList.asObservable()
             .bind { list in
-                self.userList = list
-                self.tableView.reloadData()
-                self.spinner?.stopAnimating()
+                self.handleUserData(list)
             }.disposed(by: disposeBag)
+    }
+    
+    private func handleUserData(_ list: [User]) {
+        self.userList = list
+        if list.count >= self.MAX_USERS {
+            self.tableView.tableFooterView?.isHidden = true
+        }
+        
+        self.tableView.reloadData()
+        self.spinner?.stopAnimating()
     }
 }
 
@@ -73,5 +91,11 @@ extension UserListViewController {
         cell?.email?.text = "Email: \(user.email ?? "")"
         
         return cell ?? UITableViewCell()
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 && self.userList.count <= MAX_USERS {
+            self.userListViewModel?.loadData()
+        }
     }
 }
