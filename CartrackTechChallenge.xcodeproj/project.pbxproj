@@ -52,6 +52,8 @@
 		FA936589249121CF00E51C0D /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA936588249121CF00E51C0D /* Company.swift */; };
 		FA93658C24912CD500E51C0D /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93658B24912CD500E51C0D /* UserListCell.swift */; };
 		FA9F575A2494D75700676FAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9F57592494D75700676FAE /* LaunchScreen.storyboard */; };
+		FA9F575E2494E18400676FAE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA9F575D2494E18400676FAE /* Localizable.strings */; };
+		FA9F57602494E27C00676FAE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F575F2494E27C00676FAE /* Extensions.swift */; };
 		FAAABFC624913E8100B82268 /* UserDetailsMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAABFC524913E8100B82268 /* UserDetailsMainCell.swift */; };
 		FAAABFC82491445C00B82268 /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAABFC72491445C00B82268 /* CompanyCell.swift */; };
 		FAAABFCA2491447500B82268 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAABFC92491447500B82268 /* AddressCell.swift */; };
@@ -126,6 +128,8 @@
 		FA936588249121CF00E51C0D /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		FA93658B24912CD500E51C0D /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 		FA9F57592494D75700676FAE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA9F575D2494E18400676FAE /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		FA9F575F2494E27C00676FAE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FAAABFC524913E8100B82268 /* UserDetailsMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsMainCell.swift; sourceTree = "<group>"; };
 		FAAABFC72491445C00B82268 /* CompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCell.swift; sourceTree = "<group>"; };
 		FAAABFC92491447500B82268 /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
@@ -309,8 +313,8 @@
 		FA495DC1249047BE005B9963 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FA495D9C249046AA005B9963 /* Main.storyboard */,
-				FA9F57592494D75700676FAE /* LaunchScreen.storyboard */,
+				FA9F575B2494E13800676FAE /* Storyboards */,
+				FA9F575C2494E14900676FAE /* Localization */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -344,6 +348,7 @@
 			children = (
 				FA15B0242493B3F500E7506B /* UI */,
 				FA9365802491119800E51C0D /* CartrackConstants.swift */,
+				FA9F575F2494E27C00676FAE /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -357,6 +362,23 @@
 				FAAABFC92491447500B82268 /* AddressCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		FA9F575B2494E13800676FAE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA495D9C249046AA005B9963 /* Main.storyboard */,
+				FA9F57592494D75700676FAE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA9F575C2494E14900676FAE /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				FA9F575D2494E18400676FAE /* Localizable.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		FAEF36EE2492A1D900E97DDD /* Base */ = {
@@ -453,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA9F575A2494D75700676FAE /* LaunchScreen.storyboard in Resources */,
+				FA9F575E2494E18400676FAE /* Localizable.strings in Resources */,
 				FA495DA0249046AB005B9963 /* Assets.xcassets in Resources */,
 				FA495D9E249046AA005B9963 /* Main.storyboard in Resources */,
 			);
@@ -596,6 +619,7 @@
 				FA495DCF249048E2005B9963 /* IUserService.swift in Sources */,
 				FA495DC52490485E005B9963 /* LoginViewModel.swift in Sources */,
 				FA0E54DD2493D44B001910D5 /* ICountryPickerViewModel.swift in Sources */,
+				FA9F57602494E27C00676FAE /* Extensions.swift in Sources */,
 				FA93658C24912CD500E51C0D /* UserListCell.swift in Sources */,
 				FA93657924910D8500E51C0D /* User.swift in Sources */,
 				FA15B0282493B42F00E7506B /* CartrackTextField.swift in Sources */,

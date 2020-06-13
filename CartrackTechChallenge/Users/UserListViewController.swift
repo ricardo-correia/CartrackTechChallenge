@@ -87,8 +87,8 @@ extension UserListViewController {
         /// Configure the cell and supply the data do be displayed
         let user = self.userList[indexPath.row]
         cell?.name?.text = user.name ?? ""
-        cell?.username?.text = "Username: \(user.username ?? "")"
-        cell?.email?.text = "Email: \(user.email ?? "")"
+        cell?.username?.text = "\(user.username ?? "")"
+        cell?.email?.text = "\(user.email ?? "")"
         
         return cell ?? UITableViewCell()
     }

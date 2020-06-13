@@ -105,7 +105,6 @@ extension UserDetailsViewController {
         let long = userDetails?.address?.geo?.longitude ?? 0
         
         let userCenter = CLLocationCoordinate2D(latitude: lat, longitude: long)
-        print("lat = \(lat), long = \(long)")
         cell.mapView.setCenter(userCenter, animated: true)
         
         return cell

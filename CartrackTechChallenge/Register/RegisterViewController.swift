@@ -95,16 +95,18 @@ internal class RegisterViewController: BaseViewController, PickerViewDelegate, U
     }
     
     private func presentSuccessAlertController() {
-        let alert = UIAlertController(title: "Registration successfull", message: "Welcome!!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { _ in
+        let alert = UIAlertController(title: "registration_successfull".localized(),
+                                      message: "welcome".localized(), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok".localized(), style: .cancel, handler: { _ in
             self.navigationController?.popViewController(animated: true)
         }))
         self.present(alert, animated: true)
     }
     
     private func presentErrorAlertController() {
-        let alert = UIAlertController(title: "Registration Failed", message: "An error has occurred", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        let alert = UIAlertController(title: "registration_failed".localized(),
+                                      message: "an_error_has_occurred".localized(), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok".localized(), style: .cancel, handler: nil))
         self.present(alert, animated: true)
     }
 }

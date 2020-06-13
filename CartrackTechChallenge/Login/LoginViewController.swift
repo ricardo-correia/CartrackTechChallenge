@@ -81,8 +81,9 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     }
     
     private func presentAlertController() {
-        let alert = UIAlertController(title: "Login Failed", message: "Incorrect username or password", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        let alert = UIAlertController(title: "login_failed".localized(),
+                                      message: "login_incorrect_username".localized(), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok".localized(), style: .cancel, handler: nil))
         self.present(alert, animated: true)
     }
 }
