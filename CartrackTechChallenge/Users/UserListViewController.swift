@@ -31,7 +31,7 @@ internal class UserListViewController: UITableViewController {
         self.bindObservableVariables()
         self.userListViewModel?.loadData()
         
-        spinner = UIActivityIndicatorView(style: .medium)
+        spinner = UIActivityIndicatorView()
         spinner?.hidesWhenStopped = true
         spinner?.startAnimating()
         self.tableView.backgroundView = spinner
