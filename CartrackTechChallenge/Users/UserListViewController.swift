@@ -83,12 +83,18 @@ extension UserListViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserListCell", for: indexPath) as? UserListCell
+        cell?.selectionStyle = .none
         
         /// Configure the cell and supply the data do be displayed
         let user = self.userList[indexPath.row]
         cell?.name?.text = user.name ?? ""
-        cell?.username?.text = "\(user.username ?? "")"
-        cell?.email?.text = "\(user.email ?? "")"
+        
+        
+        let usernameImg = UIImage(named: "username") ?? UIImage()
+        cell?.username?.set(image: usernameImg, with: user.username ?? "")
+        
+        let emailImg = UIImage(named: "email") ?? UIImage()
+        cell?.email?.set(image: emailImg, with: user.email ?? "")
         
         return cell ?? UITableViewCell()
     }
