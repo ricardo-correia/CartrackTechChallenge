@@ -41,6 +41,17 @@ internal class CountryRepository: BaseSQLiteRepository, ICountryRepository {
         }
     }
     
+    internal func getCountryName(id: Int) -> Observable<String> {
+        return Observable.create { observer in
+            let country = self.findCountry(id: id)
+            
+            observer.onNext(country)
+            observer.onCompleted()
+            
+            return Disposables.create {}
+        }
+    }
+    
     private func createCountryData() {
         self.insert(name: "Portugal")
         self.insert(name: "Spain")
@@ -118,5 +129,23 @@ internal class CountryRepository: BaseSQLiteRepository, ICountryRepository {
         sqlite3_finalize(queryStatement)
         
         return isEmpty
+    }
+    
+    private func findCountry(id: Int) -> String {
+        let queryStatementString = "SELECT Name FROM Country WHERE Id = \(id);"
+        var queryStatement: OpaquePointer?
+        var result = ""
+
+        if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+            if sqlite3_step(queryStatement) == SQLITE_ROW {
+                 if let queryResultName = sqlite3_column_text(queryStatement, 0) {
+                    result = String(cString: queryResultName)
+                 }
+            }
+        }
+
+        sqlite3_finalize(queryStatement)
+        
+        return result
     }
 }

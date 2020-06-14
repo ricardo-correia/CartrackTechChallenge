@@ -16,11 +16,12 @@ internal class AccountRepository: BaseSQLiteRepository, IAccountRepository {
     private let createAccountTableString = """
                                     CREATE TABLE IF NOT EXISTS Account(
                                     Id INTEGER PRIMARY KEY,
-                                    CountryId INTEGET NOT NULL,
+                                    CountryId INTEGER NOT NULL,
+                                    Active INTEGER,
                                     Username CHAR(255),
                                     Password CHAR(255));
                                     """
-    private let insertAccountString = "INSERT INTO Account (CountryId, Username, Password) VALUES (?, ?, ?);"
+    private let insertAccountString = "INSERT INTO Account (CountryId, Active, Username, Password) VALUES (?, ?, ?, ?);"
     private var db: OpaquePointer?
     
     override init(){
@@ -33,6 +34,7 @@ internal class AccountRepository: BaseSQLiteRepository, IAccountRepository {
     internal func login(username: String, password: String) -> Observable<Bool> {
         return Observable.create { observer in
             let success = self.validateLoginInfo(username: username, password: password)
+            
             observer.onNext(success)
             observer.onCompleted()
            
@@ -50,6 +52,17 @@ internal class AccountRepository: BaseSQLiteRepository, IAccountRepository {
             }
            
             observer.onNext(success ?? false)
+            observer.onCompleted()
+           
+            return Disposables.create {}
+        }
+    }
+    
+    func getCurrentUser() -> Observable<(username: String, countryId: Int)> {
+        return Observable.create { observer in
+            let user = self.getActiveUser()
+            
+            observer.onNext(user)
             observer.onCompleted()
            
             return Disposables.create {}
@@ -78,8 +91,9 @@ internal class AccountRepository: BaseSQLiteRepository, IAccountRepository {
 
         if sqlite3_prepare_v2(db, insertAccountString, -1, &insertStatement, nil) == SQLITE_OK {
             sqlite3_bind_int(insertStatement, 1, countryId)
-            sqlite3_bind_text(insertStatement, 2, username.utf8String, -1, nil)
-            sqlite3_bind_text(insertStatement, 3, password.utf8String, -1, nil)
+            sqlite3_bind_int(insertStatement, 2, 0)
+            sqlite3_bind_text(insertStatement, 3, username.utf8String, -1, nil)
+            sqlite3_bind_text(insertStatement, 4, password.utf8String, -1, nil)
 
             if sqlite3_step(insertStatement) == SQLITE_DONE {
                 result = true
@@ -115,11 +129,46 @@ internal class AccountRepository: BaseSQLiteRepository, IAccountRepository {
         if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
             if sqlite3_step(queryStatement) == SQLITE_ROW {
                 result = true
+                let previousUser = self.getActiveUser()
+                self.changeUserState(username: previousUser.username, active: 0)
+                self.changeUserState(username: username, active: 1)
             }
         }
 
         sqlite3_finalize(queryStatement)
         
         return result
+    }
+    
+    private func getActiveUser() -> (username: String, countryId: Int) {
+        let queryStatementString = "SELECT Username, CountryId FROM Account WHERE Active = 1;"
+        var queryStatement: OpaquePointer?
+        var username = ""
+        var countryId = 0
+
+        if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+            if sqlite3_step(queryStatement) == SQLITE_ROW {
+                if let queryResultName = sqlite3_column_text(queryStatement, 0) {
+                    username = String(cString: queryResultName)
+                }
+                
+                countryId = Int(sqlite3_column_int(queryStatement, 1))
+            }
+        }
+
+        sqlite3_finalize(queryStatement)
+        
+        return (username, countryId)
+    }
+    
+    private func changeUserState(username: String, active: Int) {
+        let queryStatementString = "UPDATE Account SET Active = \(active) WHERE Username = '\(username)';"
+        var queryStatement: OpaquePointer?
+
+        if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+            sqlite3_step(queryStatement)
+        }
+
+        sqlite3_finalize(queryStatement)
     }
 }

@@ -27,6 +27,11 @@ extension SwinjectStoryboard {
             c.pickerViewModel = r.resolve(ICountryPickerViewModel.self)
         }
         
+        // AccountViewController
+        defaultContainer.storyboardInitCompleted(AccountViewController.self) { r, c in
+            c.accountViewModel = r.resolve(IAccountViewModel.self)
+        }
+        
         // UserListViewController
         defaultContainer.storyboardInitCompleted(UserListViewController.self) { r, c in
             c.userListViewModel = r.resolve(IUserListViewModel.self)
@@ -34,7 +39,7 @@ extension SwinjectStoryboard {
         
         // UserDetailsViewController
         defaultContainer.storyboardInitCompleted(UserDetailsViewController.self) { r, c in
-            c.userDetailsViewModel = r.resolve(IUserDetailsViewModel.self)
+           
         }
 
         InjectAppViewModels.init().assemble(container: defaultContainer)

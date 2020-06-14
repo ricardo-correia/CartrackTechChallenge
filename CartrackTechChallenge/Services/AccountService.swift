@@ -35,4 +35,12 @@ internal class AccountService: IAccountService {
     func getCountryList() -> Observable<[Country]>? {
         return self.countryRepository?.getCountryList()
     }
+    
+    func getActiveUser() -> Observable<(username: String, countryId: Int)>? {
+        self.accountRepository?.getCurrentUser()
+    }
+    
+    func getCountryName(id: Int) -> Observable<String>? {
+        self.countryRepository?.getCountryName(id: id)
+    }
 }

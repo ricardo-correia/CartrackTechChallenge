@@ -11,4 +11,5 @@ import RxSwift
 
 internal protocol ICountryRepository {
     func getCountryList() -> Observable<[Country]>
+    func getCountryName(id: Int) -> Observable<String>
 }

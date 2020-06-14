@@ -13,6 +13,9 @@ import RxCocoa
 
 internal class UserListViewController: UITableViewController {
     
+    // MARK: - IBoutlets
+    @IBOutlet weak var accountButton: UIBarButtonItem!
+    
     // MARK: - Private Constants
     private let MAX_USERS = 100
     
@@ -20,7 +23,7 @@ internal class UserListViewController: UITableViewController {
     internal var userListViewModel: IUserListViewModel?
     
     // MARK: - Private Attributes
-    private var spinner: UIActivityIndicatorView?
+    private var activityIndicator: UIActivityIndicatorView?
     private var userList: [User] = []
     private let disposeBag = DisposeBag()
     
@@ -30,18 +33,10 @@ internal class UserListViewController: UITableViewController {
         
         self.bindObservableVariables()
         self.userListViewModel?.loadData()
-        
-        spinner = UIActivityIndicatorView()
-        spinner?.hidesWhenStopped = true
-        spinner?.startAnimating()
-        self.tableView.backgroundView = spinner
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Account", style: .plain, target: self,
-                                                                 action: #selector(accountTapped))
+        self.initActivityIndicator()
     }
     
-    @objc func accountTapped() {
-        
+    @IBAction func didPressAccountButton(_ sender: Any) {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,6 +46,14 @@ internal class UserListViewController: UITableViewController {
         }
         
         viewController.userDetails = self.userList[row]
+    }
+    
+    private func initActivityIndicator() {
+        activityIndicator = UIActivityIndicatorView()
+        activityIndicator?.hidesWhenStopped = true
+        activityIndicator?.startAnimating()
+        
+        self.tableView.backgroundView = activityIndicator
     }
     
     private func bindObservableVariables() {
@@ -67,7 +70,7 @@ internal class UserListViewController: UITableViewController {
         }
         
         self.tableView.reloadData()
-        self.spinner?.stopAnimating()
+        self.activityIndicator?.stopAnimating()
     }
 }
 
@@ -94,7 +97,7 @@ extension UserListViewController {
         cell?.username?.set(image: usernameImg, with: user.username ?? "", width: 15, height: 15)
         
         let emailImg = UIImage(named: "email") ?? UIImage()
-        cell?.email?.set(image: emailImg, with: user.email ?? "", width: 15, height: 15)
+        cell?.email?.set(image: emailImg, with: user.email ?? "", width: 20, height: 15)
         
         return cell ?? UITableViewCell()
     }

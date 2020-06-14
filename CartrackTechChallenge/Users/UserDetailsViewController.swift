@@ -13,13 +13,11 @@ import UIKit
 internal class UserDetailsViewController: UITableViewController {
     
     // MARK: - Internal Attributes
-    internal var userDetailsViewModel: IUserDetailsViewModel?
     internal var userDetails: User?
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 }
 
@@ -76,7 +74,7 @@ extension UserDetailsViewController {
         cell.phoneNumber?.set(image: phoneImg, with: userDetails?.phone ?? "", width: 15, height: 15)
         
         let emailImg = UIImage(named: "email") ?? UIImage()
-        cell.email?.set(image: emailImg, with: userDetails?.email ?? "", width: 15, height: 15)
+        cell.email?.set(image: emailImg, with: userDetails?.email ?? "", width: 20, height: 15)
         
         let webImg = UIImage(named: "web") ?? UIImage()
         cell.website?.set(image: webImg, with: userDetails?.website ?? "", width: 15, height: 15)

@@ -29,15 +29,16 @@ public class InjectAppViewModels: Assembly {
             return CountryPickerViewModel(with: accountService)
         }
         
+        // IAccountViewModel
+        container.register(IAccountViewModel.self) { _ in
+            let accountService = container.resolve(IAccountService.self)
+            return AccountViewModel(with: accountService)
+        }
+        
         // IUserListViewModel
         container.register(IUserListViewModel.self) { _ in
             let userService = container.resolve(IUserService.self)
             return UserListViewModel(with: userService)
-        }
-        
-        // IUserDetailsViewModel
-        container.register(IUserDetailsViewModel.self) { _ in
-            return UserDetailsViewModel()
         }
     }
 }

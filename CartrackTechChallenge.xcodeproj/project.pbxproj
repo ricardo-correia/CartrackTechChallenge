@@ -36,8 +36,6 @@
 		FA495DD5249049FA005B9963 /* IUserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DD4249049FA005B9963 /* IUserListViewModel.swift */; };
 		FA495DD724904A05005B9963 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DD624904A05005B9963 /* UserListViewModel.swift */; };
 		FA495DD924904A6E005B9963 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DD824904A6E005B9963 /* UserDetailsViewController.swift */; };
-		FA495DDB24904A84005B9963 /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DDA24904A84005B9963 /* UserDetailsViewModel.swift */; };
-		FA495DDD24904A9B005B9963 /* IUserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DDC24904A9B005B9963 /* IUserDetailsViewModel.swift */; };
 		FA495DE524904BF7005B9963 /* DependencyResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DE024904BF7005B9963 /* DependencyResolver.swift */; };
 		FA495DE624904BF7005B9963 /* InjectAppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DE124904BF7005B9963 /* InjectAppServices.swift */; };
 		FA495DE724904BF7005B9963 /* SwinjectStoryboard+Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DE224904BF7005B9963 /* SwinjectStoryboard+Inject.swift */; };
@@ -61,6 +59,9 @@
 		FAAABFCE2491AED000B82268 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAABFCD2491AED000B82268 /* AccountService.swift */; };
 		FAAABFD02491AF2C00B82268 /* IAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAABFCF2491AF2C00B82268 /* IAccountRepository.swift */; };
 		FAAABFD22491AF3C00B82268 /* AccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAABFD12491AF3C00B82268 /* AccountRepository.swift */; };
+		FAEDD0E2249633C5005B30F6 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD0E1249633C5005B30F6 /* AccountViewModel.swift */; };
+		FAEDD0E4249633D3005B30F6 /* IAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD0E3249633D3005B30F6 /* IAccountViewModel.swift */; };
+		FAEDD0E52496377B005B30F6 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD0DE2496339E005B30F6 /* AccountViewController.swift */; };
 		FAEF36F02492A1F200E97DDD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF36EF2492A1F200E97DDD /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -112,8 +113,6 @@
 		FA495DD4249049FA005B9963 /* IUserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserListViewModel.swift; sourceTree = "<group>"; };
 		FA495DD624904A05005B9963 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		FA495DD824904A6E005B9963 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
-		FA495DDA24904A84005B9963 /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
-		FA495DDC24904A9B005B9963 /* IUserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserDetailsViewModel.swift; sourceTree = "<group>"; };
 		FA495DE024904BF7005B9963 /* DependencyResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyResolver.swift; sourceTree = "<group>"; };
 		FA495DE124904BF7005B9963 /* InjectAppServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectAppServices.swift; sourceTree = "<group>"; };
 		FA495DE224904BF7005B9963 /* SwinjectStoryboard+Inject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Inject.swift"; sourceTree = "<group>"; };
@@ -137,6 +136,9 @@
 		FAAABFCD2491AED000B82268 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		FAAABFCF2491AF2C00B82268 /* IAccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAccountRepository.swift; sourceTree = "<group>"; };
 		FAAABFD12491AF3C00B82268 /* AccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRepository.swift; sourceTree = "<group>"; };
+		FAEDD0DE2496339E005B30F6 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		FAEDD0E1249633C5005B30F6 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		FAEDD0E3249633D3005B30F6 /* IAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAccountViewModel.swift; sourceTree = "<group>"; };
 		FAEF36EF2492A1F200E97DDD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,6 +224,7 @@
 				FA495D96249046AA005B9963 /* AppDelegate.swift */,
 				FA495DCC249048BA005B9963 /* SceneDelegate.swift */,
 				FAEF36EE2492A1D900E97DDD /* Base */,
+				FAEDD0E0249633A6005B30F6 /* Account */,
 				FA495DB824904792005B9963 /* Register */,
 				FA495DBC249047AB005B9963 /* Login */,
 				FA495DB9249047AA005B9963 /* Users */,
@@ -267,8 +270,6 @@
 				FA495DD4249049FA005B9963 /* IUserListViewModel.swift */,
 				FA495DD624904A05005B9963 /* UserListViewModel.swift */,
 				FA495DD824904A6E005B9963 /* UserDetailsViewController.swift */,
-				FA495DDC24904A9B005B9963 /* IUserDetailsViewModel.swift */,
-				FA495DDA24904A84005B9963 /* UserDetailsViewModel.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -379,6 +380,16 @@
 				FA9F575D2494E18400676FAE /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		FAEDD0E0249633A6005B30F6 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				FAEDD0DE2496339E005B30F6 /* AccountViewController.swift */,
+				FAEDD0E3249633D3005B30F6 /* IAccountViewModel.swift */,
+				FAEDD0E1249633C5005B30F6 /* AccountViewModel.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		FAEF36EE2492A1D900E97DDD /* Base */ = {
@@ -580,9 +591,10 @@
 				FAAABFC624913E8100B82268 /* UserDetailsMainCell.swift in Sources */,
 				FA93657B249110D900E51C0D /* UserRepository.swift in Sources */,
 				FAAABFCA2491447500B82268 /* AddressCell.swift in Sources */,
-				FA495DDD24904A9B005B9963 /* IUserDetailsViewModel.swift in Sources */,
 				FAEF36F02492A1F200E97DDD /* BaseViewController.swift in Sources */,
+				FAEDD0E2249633C5005B30F6 /* AccountViewModel.swift in Sources */,
 				FA9365852491218D00E51C0D /* Address.swift in Sources */,
+				FAEDD0E52496377B005B30F6 /* AccountViewController.swift in Sources */,
 				FA9365812491119800E51C0D /* CartrackConstants.swift in Sources */,
 				FA495DC924904881005B9963 /* RegisterViewController.swift in Sources */,
 				FA495DD3249049D3005B9963 /* UserListViewController.swift in Sources */,
@@ -609,11 +621,11 @@
 				FA495DE824904BF7005B9963 /* InjectAppViewModels.swift in Sources */,
 				FA495DC724904871005B9963 /* IRegisterViewModel.swift in Sources */,
 				FA11D7B524927627002AAD87 /* Country.swift in Sources */,
+				FAEDD0E4249633D3005B30F6 /* IAccountViewModel.swift in Sources */,
 				FAAABFD22491AF3C00B82268 /* AccountRepository.swift in Sources */,
 				FA11D7AF2492516F002AAD87 /* BaseSQLiteRepository.swift in Sources */,
 				FA495DD724904A05005B9963 /* UserListViewModel.swift in Sources */,
 				FA0E54E124944025001910D5 /* DataTypes.swift in Sources */,
-				FA495DDB24904A84005B9963 /* UserDetailsViewModel.swift in Sources */,
 				FA495DD1249048F0005B9963 /* UserService.swift in Sources */,
 				FA11D7B124926478002AAD87 /* ICountryRepository.swift in Sources */,
 				FA495DCF249048E2005B9963 /* IUserService.swift in Sources */,

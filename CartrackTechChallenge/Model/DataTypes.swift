@@ -12,3 +12,8 @@ internal enum Navigation {
     case success
     case error
 }
+
+internal struct AccountData {
+    internal var username: String?
+    internal var country: String?
+}
