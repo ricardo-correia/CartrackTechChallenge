@@ -30,15 +30,25 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.fillLocalizableStrings()
         self.setupButton(to: false)        
         self.configureTextFields()
         self.bindObservableVariables()
     }
     
+    private func fillLocalizableStrings() {
+        self.loginTitle.text = "login_title".localized()
+        self.loginDescription.text = "login_description".localized()
+        self.loginButton.setTitle("login_title".localized(), for: .normal)
+        self.registerButton.setTitle("registration_title".localized(), for: .normal)
+    }
+    
     private func configureTextFields() {
+        username.placeholder = "username_placeholder".localized()
         username.delegate = self
         username.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         
+        password.placeholder = "password_placeholder".localized()
         password.delegate = self
         password.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         password.isSecureTextEntry = true

@@ -36,15 +36,24 @@ internal class RegisterViewController: BaseViewController, PickerViewDelegate, U
         super.viewDidLoad()
         
         self.setupButton(to: false)
+        self.fillLocalizableStrings()
         self.configureTextFields()
         self.configureCountryButton()
         self.bindObservableVariables()
     }
     
+    private func fillLocalizableStrings() {
+        self.registerTitle.text = "registration_title".localized()
+        self.registerDescription.text = "registration_description".localized()
+        self.registerButton.setTitle("registration_title".localized(), for: .normal)
+    }
+    
     private func configureTextFields() {
+        username.placeholder = "username_placeholder".localized()
         username.delegate = self
         username.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
               
+        password.placeholder = "password_placeholder".localized()
         password.delegate = self
         password.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         password.isSecureTextEntry = true
