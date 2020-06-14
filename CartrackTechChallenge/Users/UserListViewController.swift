@@ -91,10 +91,10 @@ extension UserListViewController {
         
         
         let usernameImg = UIImage(named: "username") ?? UIImage()
-        cell?.username?.set(image: usernameImg, with: user.username ?? "")
+        cell?.username?.set(image: usernameImg, with: user.username ?? "", width: 15, height: 15)
         
         let emailImg = UIImage(named: "email") ?? UIImage()
-        cell?.email?.set(image: emailImg, with: user.email ?? "")
+        cell?.email?.set(image: emailImg, with: user.email ?? "", width: 15, height: 15)
         
         return cell ?? UITableViewCell()
     }

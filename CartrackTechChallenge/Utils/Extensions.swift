@@ -16,10 +16,10 @@ extension String {
 }
 
 extension UILabel {
-    func set(image: UIImage, with text: String) {
+    func set(image: UIImage, with text: String, width: Int, height: Int) {
         let attachment = NSTextAttachment()
         attachment.image = image
-        attachment.bounds = CGRect(x: 0, y: -1, width: 15, height: 15)
+        attachment.bounds = CGRect(x: 0, y: -1, width: width, height: height)
         let attachmentStr = NSAttributedString(attachment: attachment)
 
         let mutableAttributedString = NSMutableAttributedString()

@@ -35,12 +35,10 @@ extension UserDetailsViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
-        case 0:
+        case 0, 2:
             return 350
         case 1:
-            return 150
-        case 2:
-            return 350
+            return 180
         default:
             break
         }
@@ -68,13 +66,20 @@ extension UserDetailsViewController {
             return UITableViewCell()
         }
             
-        /// Configure the cell and supply the data do be displayed
+        cell.selectionStyle = .none
         cell.name?.text = userDetails?.name ?? ""
-        cell.username?.text = userDetails?.username ?? ""
-        cell.phoneNumber?.text = userDetails?.phone ?? ""
         
-        cell.email?.text = userDetails?.email ?? ""
-        cell.website?.text = userDetails?.website ?? ""
+        let usernameImg = UIImage(named: "username") ?? UIImage()
+        cell.username?.set(image: usernameImg, with: userDetails?.username ?? "", width: 15, height: 15)
+        
+        let phoneImg = UIImage(named: "phone") ?? UIImage()
+        cell.phoneNumber?.set(image: phoneImg, with: userDetails?.phone ?? "", width: 15, height: 15)
+        
+        let emailImg = UIImage(named: "email") ?? UIImage()
+        cell.email?.set(image: emailImg, with: userDetails?.email ?? "", width: 15, height: 15)
+        
+        let webImg = UIImage(named: "web") ?? UIImage()
+        cell.website?.set(image: webImg, with: userDetails?.website ?? "", width: 15, height: 15)
         
         return cell
     }
@@ -84,7 +89,11 @@ extension UserDetailsViewController {
             return UITableViewCell()
         }
             
-        /// Configure the cell and supply the data do be displayed
+        cell.selectionStyle = .none
+        
+        let workImg = UIImage(named: "work") ?? UIImage()
+        cell.worksAtLabel.set(image: workImg, with: "works_at".localized(), width: 20, height: 20)
+        
         cell.companyName?.text = userDetails?.company?.name ?? ""
         cell.catchPhrase?.text = userDetails?.company?.catchPhrase ?? ""
         cell.bs?.text = userDetails?.company?.bs ?? ""
@@ -97,7 +106,11 @@ extension UserDetailsViewController {
             return UITableViewCell()
         }
             
-        /// Configure the cell and supply the data do be displayed
+        cell.selectionStyle = .none
+        
+        let addressImg = UIImage(named: "address") ?? UIImage()
+        cell.addressLabel.set(image: addressImg, with: "address".localized(), width: 20, height: 20)
+        
         let address = "\(userDetails?.address?.street ?? ""), \(userDetails?.address?.suite ?? ""), \(userDetails?.address?.zipcode ?? "") - \(userDetails?.address?.city ?? "")"
         cell.addressName?.text = address
         

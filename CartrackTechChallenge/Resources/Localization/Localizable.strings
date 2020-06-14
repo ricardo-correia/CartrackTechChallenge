@@ -15,3 +15,6 @@ registration_failed = "Registration Failed";
 
 ok = "Ok";
 an_error_has_occurred = "An error has occurred";
+
+works_at = "Works at";
+address = "Address";
