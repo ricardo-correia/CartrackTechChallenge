@@ -111,13 +111,18 @@ extension UserDetailsViewController {
         let addressImg = UIImage(named: "address") ?? UIImage()
         cell.addressLabel.set(image: addressImg, with: "address".localized(), width: 20, height: 20)
         
-        let address = "\(userDetails?.address?.street ?? ""), \(userDetails?.address?.suite ?? ""), \(userDetails?.address?.zipcode ?? "") - \(userDetails?.address?.city ?? "")"
+        let address = "\(userDetails?.address?.street ?? ""), \(userDetails?.address?.suite ?? ""), \(userDetails?.address?.zipcode ?? ""), \(userDetails?.address?.city ?? "")"
         cell.addressName?.text = address
         
         let lat = userDetails?.address?.geo?.latitude ?? 0
         let long = userDetails?.address?.geo?.longitude ?? 0
         
         let userCenter = CLLocationCoordinate2D(latitude: lat, longitude: long)
+        let annotation = MKPointAnnotation()
+        annotation.title = address
+        annotation.coordinate = userCenter
+        
+        cell.mapView.addAnnotation(annotation)
         cell.mapView.setCenter(userCenter, animated: true)
         
         return cell
