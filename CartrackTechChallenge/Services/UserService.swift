@@ -28,7 +28,6 @@ internal class UserService: IUserService {
             let getUserList = self.userRepository?.getUserList()
             getUserList?.subscribe(
                 onNext: { jsonData in
-                    
                     let userList = self.buildUserList(jsonData)
                     
                     observer.onNext(userList)

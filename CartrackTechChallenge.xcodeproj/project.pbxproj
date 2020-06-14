@@ -23,7 +23,6 @@
 		FA495D9B249046AA005B9963 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495D9A249046AA005B9963 /* LoginViewController.swift */; };
 		FA495D9E249046AA005B9963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA495D9C249046AA005B9963 /* Main.storyboard */; };
 		FA495DA0249046AB005B9963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA495D9F249046AB005B9963 /* Assets.xcassets */; };
-		FA495DAE249046AB005B9963 /* CartrackTechChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DAD249046AB005B9963 /* CartrackTechChallengeTests.swift */; };
 		FA495DC324904850005B9963 /* ILoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DC224904850005B9963 /* ILoginViewModel.swift */; };
 		FA495DC52490485E005B9963 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DC42490485E005B9963 /* LoginViewModel.swift */; };
 		FA495DC724904871005B9963 /* IRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA495DC624904871005B9963 /* IRegisterViewModel.swift */; };
@@ -62,6 +61,10 @@
 		FAEDD0E2249633C5005B30F6 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD0E1249633C5005B30F6 /* AccountViewModel.swift */; };
 		FAEDD0E4249633D3005B30F6 /* IAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD0E3249633D3005B30F6 /* IAccountViewModel.swift */; };
 		FAEDD0E52496377B005B30F6 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD0DE2496339E005B30F6 /* AccountViewController.swift */; };
+		FAEDD0E82496DC8A005B30F6 /* get_user_list.json in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD0E72496DC8A005B30F6 /* get_user_list.json */; };
+		FAEDD0EA2496DCEC005B30F6 /* UnitTestingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD0E92496DCEC005B30F6 /* UnitTestingUtils.swift */; };
+		FAEDD0EE2496E062005B30F6 /* UserServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD0ED2496E062005B30F6 /* UserServiceTests.swift */; };
+		FAEDD0F02496E47B005B30F6 /* get_user_list_error.json in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD0EF2496E47B005B30F6 /* get_user_list_error.json */; };
 		FAEF36F02492A1F200E97DDD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF36EF2492A1F200E97DDD /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,7 +102,6 @@
 		FA495D9F249046AB005B9963 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA495DA4249046AB005B9963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA495DA9249046AB005B9963 /* CartrackTechChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CartrackTechChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA495DAD249046AB005B9963 /* CartrackTechChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartrackTechChallengeTests.swift; sourceTree = "<group>"; };
 		FA495DAF249046AB005B9963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA495DC224904850005B9963 /* ILoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoginViewModel.swift; sourceTree = "<group>"; };
 		FA495DC42490485E005B9963 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -139,6 +141,10 @@
 		FAEDD0DE2496339E005B30F6 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		FAEDD0E1249633C5005B30F6 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		FAEDD0E3249633D3005B30F6 /* IAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAccountViewModel.swift; sourceTree = "<group>"; };
+		FAEDD0E72496DC8A005B30F6 /* get_user_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = get_user_list.json; sourceTree = "<group>"; };
+		FAEDD0E92496DCEC005B30F6 /* UnitTestingUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingUtils.swift; sourceTree = "<group>"; };
+		FAEDD0ED2496E062005B30F6 /* UserServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserServiceTests.swift; path = ../UserServiceTests.swift; sourceTree = "<group>"; };
+		FAEDD0EF2496E47B005B30F6 /* get_user_list_error.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = get_user_list_error.json; sourceTree = "<group>"; };
 		FAEF36EF2492A1F200E97DDD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -242,7 +248,9 @@
 		FA495DAC249046AB005B9963 /* CartrackTechChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA495DAD249046AB005B9963 /* CartrackTechChallengeTests.swift */,
+				FAEDD0E62496DC61005B30F6 /* Mock */,
+				FAEDD0EC2496DDC7005B30F6 /* Services */,
+				FAEDD0E92496DCEC005B30F6 /* UnitTestingUtils.swift */,
 				FA495DAF249046AB005B9963 /* Info.plist */,
 			);
 			path = CartrackTechChallengeTests;
@@ -392,6 +400,31 @@
 			path = Account;
 			sourceTree = "<group>";
 		};
+		FAEDD0E62496DC61005B30F6 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				FAEDD0EB2496DD8C005B30F6 /* Requests */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		FAEDD0EB2496DD8C005B30F6 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				FAEDD0E72496DC8A005B30F6 /* get_user_list.json */,
+				FAEDD0EF2496E47B005B30F6 /* get_user_list_error.json */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		FAEDD0EC2496DDC7005B30F6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FAEDD0ED2496E062005B30F6 /* UserServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		FAEF36EE2492A1D900E97DDD /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +529,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAEDD0E82496DC8A005B30F6 /* get_user_list.json in Resources */,
+				FAEDD0F02496E47B005B30F6 /* get_user_list_error.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,7 +678,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA495DAE249046AB005B9963 /* CartrackTechChallengeTests.swift in Sources */,
+				FAEDD0EE2496E062005B30F6 /* UserServiceTests.swift in Sources */,
+				FAEDD0EA2496DCEC005B30F6 /* UnitTestingUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
