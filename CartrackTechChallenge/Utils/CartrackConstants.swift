@@ -13,5 +13,6 @@ internal enum CustomError: Error {
 }
 
 internal class CartrackConstants {
+    internal static let DB_NAME = "cartrack.sqlite"
     internal static let GET_USERS = "https://jsonplaceholder.typicode.com/users"
 }

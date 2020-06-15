@@ -24,10 +24,10 @@ internal class AccountRepository: BaseSQLiteRepository, IAccountRepository {
     private let insertAccountString = "INSERT INTO Account (CountryId, Active, Username, Password) VALUES (?, ?, ?, ?);"
     private var db: OpaquePointer?
     
-    override init(){
+    init(dbName: String){
         super.init()
         
-        self.db = openDatabase()
+        self.db = openDatabase(dbName: dbName)
         self.createAccountTable()
     }
     

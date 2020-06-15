@@ -21,10 +21,10 @@ internal class CountryRepository: BaseSQLiteRepository, ICountryRepository {
     private let insertCountryString = "INSERT INTO Country (Name) VALUES (?);"
     private var db: OpaquePointer?
     
-    override init(){
+    init(dbName: String){
         super.init()
         
-        self.db = openDatabase()
+        self.db = openDatabase(dbName: dbName)
         self.createCountryTable()
         
         if checkIfTableIsEmpty() {

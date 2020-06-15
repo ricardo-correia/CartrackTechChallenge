@@ -10,8 +10,8 @@ import Foundation
 import SQLite3
 
 internal class BaseSQLiteRepository {
-    internal func openDatabase() -> OpaquePointer? {
-        let fileURL = try? FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("cartrack.sqlite")
+    internal func openDatabase(dbName: String) -> OpaquePointer? {
+        let fileURL = try? FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(dbName)
        
         var db: OpaquePointer?
         guard let url = fileURL else {

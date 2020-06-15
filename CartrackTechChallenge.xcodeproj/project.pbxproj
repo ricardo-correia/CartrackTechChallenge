@@ -65,6 +65,7 @@
 		FAEDD0EA2496DCEC005B30F6 /* UnitTestingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD0E92496DCEC005B30F6 /* UnitTestingUtils.swift */; };
 		FAEDD0EE2496E062005B30F6 /* UserServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD0ED2496E062005B30F6 /* UserServiceTests.swift */; };
 		FAEDD0F02496E47B005B30F6 /* get_user_list_error.json in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD0EF2496E47B005B30F6 /* get_user_list_error.json */; };
+		FAEDD0F42496E67A005B30F6 /* AccountServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD0F32496E67A005B30F6 /* AccountServiceTests.swift */; };
 		FAEF36F02492A1F200E97DDD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF36EF2492A1F200E97DDD /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +146,7 @@
 		FAEDD0E92496DCEC005B30F6 /* UnitTestingUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingUtils.swift; sourceTree = "<group>"; };
 		FAEDD0ED2496E062005B30F6 /* UserServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserServiceTests.swift; path = ../UserServiceTests.swift; sourceTree = "<group>"; };
 		FAEDD0EF2496E47B005B30F6 /* get_user_list_error.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = get_user_list_error.json; sourceTree = "<group>"; };
+		FAEDD0F32496E67A005B30F6 /* AccountServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceTests.swift; sourceTree = "<group>"; };
 		FAEF36EF2492A1F200E97DDD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,13 +188,6 @@
 				449AE8E7D7B15758A75CD56A /* Pods_CartrackTechChallengeTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FA11D7B6249289FD002AAD87 /* Custom */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Custom;
 			sourceTree = "<group>";
 		};
 		FA15B0242493B3F500E7506B /* UI */ = {
@@ -259,7 +254,6 @@
 		FA495DB824904792005B9963 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				FA11D7B6249289FD002AAD87 /* Custom */,
 				FA495DC824904881005B9963 /* RegisterViewController.swift */,
 				FA495DC624904871005B9963 /* IRegisterViewModel.swift */,
 				FA495DCA24904893005B9963 /* RegisterViewModel.swift */,
@@ -421,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				FAEDD0ED2496E062005B30F6 /* UserServiceTests.swift */,
+				FAEDD0F32496E67A005B30F6 /* AccountServiceTests.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -680,6 +675,7 @@
 			files = (
 				FAEDD0EE2496E062005B30F6 /* UserServiceTests.swift in Sources */,
 				FAEDD0EA2496DCEC005B30F6 /* UnitTestingUtils.swift in Sources */,
+				FAEDD0F42496E67A005B30F6 /* AccountServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

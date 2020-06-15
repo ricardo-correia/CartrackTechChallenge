@@ -20,12 +20,12 @@ public class InjectAppRepositories: Assembly {
         
         // IAccountRepository
         container.register(IAccountRepository.self) { _ in
-            return AccountRepository()
+            return AccountRepository(dbName: CartrackConstants.DB_NAME)
         }
         
         // ICountryRepository
         container.register(ICountryRepository.self) { _ in
-            return CountryRepository()
+            return CountryRepository(dbName: CartrackConstants.DB_NAME)
         }
     }
 }

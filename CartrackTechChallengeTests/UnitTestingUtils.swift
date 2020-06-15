@@ -20,4 +20,19 @@ internal class UnitTestingUtils {
         return data
     }
 
+    internal func closeDatabase(dbName: String) -> Bool {
+        let fileURL = try? FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(dbName)
+        
+        guard let url = fileURL else {
+            return false
+        }
+        
+        do {
+            try FileManager.default.removeItem(at:url)
+        } catch {
+             return false
+        }
+        
+        return true
+    }
 }
