@@ -18,7 +18,7 @@ internal class BaseViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        // Creates observers for when the keyboard is opened or closed
+        /// Creates observers for when the keyboard is opened or closed
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(keyboardWillShow),
@@ -30,13 +30,13 @@ internal class BaseViewController: UIViewController {
     }
 
     override func viewWillDisappear(_ animated: Bool) {
-        // Remove observers
+        /// Remove observers
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     
-    // Moves the view upwards when the keyboard is opened
+    /// Moves the view upwards when the keyboard is opened
     @objc private func keyboardWillShow(notification: Notification) {
         if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardHeight = keyboardFrame.cgRectValue.height
@@ -53,7 +53,7 @@ internal class BaseViewController: UIViewController {
         }
     }
 
-    // Moves the view to its original position when the keyboard is closed
+    /// Moves the view to its original position when the keyboard is closed
     @objc private func keyboardWillHide(notification: Notification) {
         if view.frame.origin.y != 0 {
             view.frame.origin.y = 0

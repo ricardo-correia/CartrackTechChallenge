@@ -16,6 +16,7 @@ internal class AccountViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var country: UILabel!
+    @IBOutlet weak var dismissButton: UIBarButtonItem!
     
     // MARK: - Internal Attributes
     internal var accountViewModel: IAccountViewModel?
@@ -27,10 +28,12 @@ internal class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.dismissButton.title = "dismiss".localized()
         self.bindObservableVariables()
         self.accountViewModel?.loadData()
     }
     
+    /// Bind to ViewModel's observable variables to update view content
     private func bindObservableVariables() {
         self.accountViewModel?.username.asObservable()
             .bind { text in
@@ -43,5 +46,10 @@ internal class AccountViewController: UIViewController {
                 let countryImg = UIImage(named: "country") ?? UIImage()
                 self.country.set(image: countryImg, with: text, width: 25, height: 25)
             }.disposed(by: disposeBag)
+    }
+    
+    
+    @IBAction func didPressDismissButton(_ sender: Any) {
+        self.dismiss(animated: true)
     }
 }

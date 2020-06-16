@@ -74,6 +74,7 @@ internal class RegisterViewController: BaseViewController, PickerViewDelegate, U
         }
     }
     
+    /// Bind to ViewModel's observable variables to update view content
     private func bindObservableVariables() {
         self.registerViewModel?.registrationSuccess.asObservable()
             .bind { registrationSuccess in

@@ -26,3 +26,8 @@ address = "Address";
 select_country_text = "Select you country...";
 username_placeholder = "Username";
 password_placeholder = "Password";
+
+dismiss = "Dismiss";
+
+save = "Save";
+cancel = "Cancel";

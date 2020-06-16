@@ -15,6 +15,8 @@ internal class CountryPickerViewController: UIViewController, UIPickerViewDelega
     
     // MARK: IBOutlets
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     // MARK: Internal Attributes
     internal var pickerViewModel: ICountryPickerViewModel?
@@ -27,6 +29,9 @@ internal class CountryPickerViewController: UIViewController, UIPickerViewDelega
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.saveButton.title = "save".localized()
+        self.cancelButton.title = "cancel".localized()
         
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
@@ -45,6 +50,10 @@ internal class CountryPickerViewController: UIViewController, UIPickerViewDelega
     @IBAction func didPressSaveButton(_ sender: Any) {
         let index = pickerView.selectedRow(inComponent: 0)
         self.delegate?.didSelectCountry(country: countries?[index])
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func didPressCancelButton(_ sender: Any) {
         self.dismiss(animated: true)
     }
 }
